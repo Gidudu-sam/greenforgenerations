@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Green for Generations gallery — photos from our tree planting, beach cleanups, and community events." />
+  <title>Green for Generations | Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>tailwind={config:{theme:{extend:{colors:{forest:{DEFAULT:'#2d5428',light:'#3a6e34',dark:'#1e3b1c'},sky:{DEFAULT:'#d8cdbd'}},fontFamily:{sans:['AvenirLT','Avenir','Century Gothic','Trebuchet MS','sans-serif']}}}}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 35 Light'),local('AvenirLTStd-Light'),local('Avenir-Light');font-weight:300;font-style:normal}
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 65 Medium'),local('AvenirLTStd-Medium'),local('Avenir-Medium');font-weight:500;font-style:normal}
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 85 Heavy'),local('AvenirLTStd-Heavy'),local('Avenir-Heavy');font-weight:800;font-style:normal}
+    html{scroll-behavior:smooth}
+    body{background:#d8cdbd;color:#6b5347;font-family:'AvenirLT','Avenir','Century Gothic','Trebuchet MS',sans-serif}
+    h1,h2,h3,h4,.font-extrabold,.font-bold{font-weight:800;color:#b85c38}
+    p,.font-medium,.leading-relaxed{font-weight:300;color:#6b5347}
+    .font-semibold,label,nav a{font-weight:500;color:#8b4513}
+    [class*="text-gray-"]{color:#6b5347 !important}
+    .text-gray-900,.text-gray-800{color:#b85c38 !important}
+    .text-gray-700{color:#8b4513 !important}
+    .text-gray-600{color:#6b5347 !important}
+    .text-gray-500{color:#7a5c4e !important}
+    .text-gray-400{color:#9b8579 !important}
+    .text-gray-300{color:#a89080 !important}
+    body>nav,nav.fixed{background-color:#fff !important}
+    .bg-white{background-color:#d8cdbd !important}
+    section.bg-white{background-color:#d8cdbd !important}
+    .rounded-2xl.bg-white,.bg-white.rounded-2xl{background-color:#e0d8cc !important}
+    .hero-bg{background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08233.jpg');background-size:cover;background-position:center !important;background-color:#2d5428 !important}
+    .nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#2d5428;transition:width .3s}.nav-link:hover::after{width:100%}
+    img{max-width:100%;display:block}
+    .img-cover{width:100%;height:100%;object-fit:cover;object-position:center}
+    /* White text on green backgrounds */
+    [style*='background:#2d5428'] h1,[style*='background:#2d5428'] h2,[style*='background:#2d5428'] h3,[style*='background:#2d5428'] h4,[style*='background:#2d5428'] p,[style*='background:#2d5428'] span,[style*='background:#1e3b1c'] h1,[style*='background:#1e3b1c'] h2,[style*='background:#1e3b1c'] h3,[style*='background:#1e3b1c'] p{color:#fff !important}
+    .hero-bg h1,.hero-bg p,.hero-bg span{color:#fff !important}
+    #scrollTopBtn{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:#2d5428;color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+    #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
+    .gallery-item{cursor:pointer;overflow:hidden;border-radius:16px;position:relative;box-shadow:0 4px 15px rgba(10,20,47,.08);background:#c8c0b0}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s}
+    .gallery-item:hover img{transform:scale(1.05)}
+    .filter-btn.active{background:#2d5428;color:#fff;border-color:#2d5428}
+    #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem}
+    #lightbox.open{display:flex}
+    #lightbox img{max-height:88vh;max-width:90vw;border-radius:.75rem;object-fit:contain;box-shadow:0 25px 60px rgba(0,0,0,.5)}
+    #lbClose{position:absolute;top:1.25rem;right:1.25rem;background:rgba(255,255,255,.15);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+    #lbClose:hover{background:rgba(255,255,255,.3)}
+    #lbPrev,#lbNext{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+    #lbPrev:hover,#lbNext:hover{background:rgba(255,255,255,.3)}
+    #lbPrev{left:1rem}#lbNext{right:1rem}
+    #lbCaption{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);color:#e5e7eb;font-size:.85rem;background:rgba(0,0,0,.5);padding:.4rem 1rem;border-radius:999px;white-space:nowrap}
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo/logo-main.jpeg" alt="Green for Generations" class="h-14 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">About</a>
+        <a href="campaigns.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Campaigns</a>
+        <a href="gallery.html" class="nav-link text-sm font-semibold" style="color:#2d5428">Gallery</a>
+        <a href="contact us.html" class="text-sm font-semibold text-white px-5 py-2 rounded-full" style="background:#2d5428">Contact Us</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 text-gray-700"><i id="menuIcon" class="fas fa-bars text-xl"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-1">
+    <a href="index.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Home</a>
+    <a href="about.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">About</a>
+    <a href="campaigns.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Campaigns</a>
+    <a href="gallery.html" class="mobile-link block py-2 px-3 rounded-lg font-semibold" style="color:#2d5428">Gallery</a>
+    <a href="contact us.html" class="mobile-link block mt-2 py-2 px-3 rounded-lg text-white text-center font-semibold" style="background:#2d5428">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08233.jpg');background-size:cover;background-position:center;background-color:#2d5428;min-height:420px;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center">
+  <div class="px-4 sm:px-6 lg:px-8 text-white">
+    <h1 class="text-5xl sm:text-6xl font-extrabold mb-4" style="color:#fff !important">Our Gallery</h1>
+    <p class="text-base max-w-xl mx-auto" style="color:rgba(255,255,255,.85);font-weight:300">A glimpse into the work, people, and moments that make our mission real.</p>
+  </div>
+</section>
+<!-- FILTER -->
+<section class="bg-white pt-14 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-widest" style="color:#3a6e34">Browse by Category</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Photo Gallery</h2>
+      <p class="text-gray-500 mt-3 max-w-xl mx-auto">Real moments from our campaigns, events, and community in action.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3" id="filterBtns">
+      <button data-filter="all" class="filter-btn active text-sm font-semibold px-5 py-2 rounded-full border border-gray-200 transition-colors">All</button>
+      <button data-filter="planting" class="filter-btn text-sm font-semibold px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-green-600 transition-colors">Tree Planting</button>
+      <button data-filter="beach" class="filter-btn text-sm font-semibold px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-green-600 transition-colors">Beach Cleanup</button>
+      <button data-filter="community" class="filter-btn text-sm font-semibold px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-green-600 transition-colors">Community</button>
+      <button data-filter="events" class="filter-btn text-sm font-semibold px-5 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-green-600 transition-colors">Events</button>
+    </div>
+  </div>
+</section>
+
+<!-- MASONRY GRID -->
+<section class="bg-white pb-20 pt-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="galleryGrid">
+
+      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Tree planting session — City Park" style="height:280px" onclick="openLightbox(0)">
+        <img src="assets/DSC08233.jpg" alt="Tree planting session" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="community" data-caption="Volunteers gathering before the event" style="height:340px" onclick="openLightbox(1)">
+        <img src="assets/DSC08298.JPG" alt="Volunteers gathering" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Hands in the soil — restoration work" style="height:260px" onclick="openLightbox(2)">
+        <img src="assets/DSC08305.jpg" alt="Restoration work" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="beach" data-caption="Beach cleanup drive — Sunset Beach" style="height:320px" onclick="openLightbox(3)">
+        <img src="assets/DSC08450 (1).jpg" alt="Beach cleanup drive" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="events" data-caption="Youth climate workshop in session" style="height:280px" onclick="openLightbox(4)">
+        <img src="assets/DSC08536.JPG" alt="Youth climate workshop" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="community" data-caption="Community coming together for the environment" style="height:360px" onclick="openLightbox(5)">
+        <img src="assets/DSC08694.JPG" alt="Community event" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="beach" data-caption="Collecting waste along the coastline" style="height:300px" onclick="openLightbox(6)">
+        <img src="assets/DSC08731 (2).JPG" alt="Coastline cleanup" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="events" data-caption="Volunteers celebrating after a successful day" style="height:270px" onclick="openLightbox(7)">
+        <img src="assets/DSC08753 (1).JPG" alt="Volunteers celebrating" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      </div>
+
+      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Recent tree planting — April 2025" style="height:310px" onclick="openLightbox(8)">
+        <img src="assets/IMG_20250416_154212.jpg" alt="Tree planting April 2025" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="lbClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  <button id="lbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="" />
+  <button id="lbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  <div id="lbCaption"></div>
+</div>
+
+<!-- CTA -->
+<section style="background:#2d5428" class="py-16 text-center text-white">
+  <div class="max-w-2xl mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Be Part of the Story</h2>
+    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">Every photo here represents real UAE volunteers making a real difference. Your moment could be next — join us.</p>
+    <a href="volunteer.html" class="inline-block px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white hover:bg-white hover:text-green-800 transition-colors">Become a Volunteer</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1e3b1c" class="text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center mb-4">
+          <img src="assets/logo/logo-white.jpeg" alt="Green for Generations" class="h-12 w-auto" />
+        </div>
+        <p class="text-sm leading-relaxed mb-6 text-gray-400">A youth-led environmental volunteering organisation founded by UAE volunteers, dedicated to conservation, sustainable living, and a greener future in the Emirates and Africa.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-facebook-f text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-twitter text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-instagram text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-youtube text-sm"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Quick Links</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Campaigns &amp; Events</a></li>
+          <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+          <li><a href="contact us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Our Campaigns</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Clean Beach Drive</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Protect Water Bodies</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Youth Climate Action</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Contact Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3"><i class="fas fa-location-dot text-green-400 mt-0.5"></i><span>United Arab Emirates</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-400"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
+          <li class="flex items-start gap-3"><i class="fas fa-clock text-green-400 mt-0.5"></i><span>Mon – Fri: 9:00 AM – 5:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10"><div class="max-w-7xl mx-auto px-4 py-5 text-center text-sm text-gray-500">&copy; 2026 Green for Generations Volunteering. All rights reserved.</div></div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up text-sm"></i></button>
+
+<script>
+  // Mobile menu
+  const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu'),menuIcon=document.getElementById('menuIcon');
+  menuBtn.addEventListener('click',()=>{const o=!mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden');menuIcon.className=o?'fas fa-bars text-xl':'fas fa-times text-xl';});
+  document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{mobileMenu.classList.add('hidden');menuIcon.className='fas fa-bars text-xl';}));
+
+  // Scroll to top
+  const scrollBtn=document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll',()=>scrollBtn.classList.toggle('visible',window.pageYOffset>400));
+  scrollBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Filter
+  const filterBtns=document.querySelectorAll('.filter-btn');
+  const items=document.querySelectorAll('.gallery-item');
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      filterBtns.forEach(b=>{b.classList.remove('active');b.classList.add('text-gray-600');});
+      btn.classList.add('active');btn.classList.remove('text-gray-600');
+      const f=btn.dataset.filter;
+      items.forEach(item=>{
+        item.style.display=(f==='all'||item.dataset.category===f)?'':'none';
+      });
+    });
+  });
+
+  // Lightbox
+  const allItems=Array.from(document.querySelectorAll('.gallery-item'));
+  let visibleItems=allItems;
+  let currentIdx=0;
+  const lb=document.getElementById('lightbox');
+  const lbImg=document.getElementById('lbImg');
+  const lbCaption=document.getElementById('lbCaption');
+
+  function openLightbox(idx){
+    visibleItems=allItems.filter(i=>i.style.display!=='none');
+    currentIdx=visibleItems.indexOf(allItems[idx]);
+    if(currentIdx<0)currentIdx=0;
+    showSlide(currentIdx);
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+
+  function showSlide(i){
+    const item=visibleItems[i];
+    lbImg.src=item.querySelector('img').src;
+    lbImg.alt=item.querySelector('img').alt;
+    lbCaption.textContent=item.dataset.caption||'';
+  }
+
+  document.getElementById('lbClose').addEventListener('click',()=>{lb.classList.remove('open');document.body.style.overflow='';});
+  document.getElementById('lbPrev').addEventListener('click',()=>{currentIdx=(currentIdx-1+visibleItems.length)%visibleItems.length;showSlide(currentIdx);});
+  document.getElementById('lbNext').addEventListener('click',()=>{currentIdx=(currentIdx+1)%visibleItems.length;showSlide(currentIdx);});
+  lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');document.body.style.overflow='';}});
+  document.addEventListener('keydown',e=>{
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow='';}
+    if(e.key==='ArrowLeft'){currentIdx=(currentIdx-1+visibleItems.length)%visibleItems.length;showSlide(currentIdx);}
+    if(e.key==='ArrowRight'){currentIdx=(currentIdx+1)%visibleItems.length;showSlide(currentIdx);}
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:800,easing:'ease-out-cubic',once:true,offset:80});</script>
+</body>
+</html>
