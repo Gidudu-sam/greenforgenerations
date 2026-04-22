@@ -44,6 +44,8 @@
     #heroCarousel h1, #heroCarousel p, .hero-bg h1, .hero-bg p{color:#fff !important}
     #scrollTopBtn{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:#2d5428;color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.25)}
     #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
+    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
 
     /* ===== PREMIUM HERO CAROUSEL ===== */
     #heroCarousel{position:relative;min-height:100vh;overflow:hidden}
@@ -70,6 +72,10 @@
     /* Dots */
     .carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .3s,transform .3s;padding:0}
     .carousel-dot.active{background:#fff;transform:scale(1.3)}
+    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -189,7 +195,7 @@
   <div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-2 min-h-96">
       <div class="flex flex-col justify-center px-8 sm:px-12 py-16">
-        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-5" style="color:#d8cdbd">We Take Action. To Make<br />Better Changes (Climate &amp;<br />Youth Action)</h2>
+        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-5" style="color:#d8cdbd" data-aos="fade-up">We Take Action. To Make<br />Better Changes (Climate &amp;<br />Youth Action)</h2>
         <p class="text-sm leading-relaxed mb-10" style="color:#b8d4b0;font-weight:300">To take decisive action against climate change by promoting sustainable solutions, reducing carbon footprints, and advocating for a healthier planet. Through education, innovation, and collaboration, we strive to empower communities, businesses, and individuals to adopt eco-friendly practices and drive meaningful environmental change.</p>
         <div class="grid grid-cols-3 gap-6">
           <div class="flex flex-col items-center text-center">
@@ -216,15 +222,15 @@
 <!-- OUR KEY PRIORITIES -->
 <section class="py-20" style="background:#d8cdbd">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38">Our Key Priorities</h2>
+    <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38" data-aos="fade-up">Our Key Priorities</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up">
         <div style="height:320px;overflow:hidden"><img src="assets/beach cleaning.jpg" alt="Conservation" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" /></div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
         <div style="height:320px;overflow:hidden"><img src="assets/newone.JPG" alt="Volunteering" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" /></div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
         <div style="height:320px;overflow:hidden"><img src="assets/tree planting.jpg" alt="Sustainability" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" /></div>
       </div>
     </div>
@@ -234,7 +240,7 @@
 <!-- OUR CAMPAIGN -->
 <section class="py-20" style="background:#e0d8cc">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38">Our Campaign</h2>
+    <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38" data-aos="fade-up">Our Campaign</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up"><div style="height:280px;overflow:hidden"><img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" /></div>
         <div class="p-5">
@@ -277,7 +283,7 @@
 <section class="py-20" style="background:#d8cdbd">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-2xl sm:text-3xl font-extrabold" style="color:#b85c38">Collaborated Partner</h2>
+      <h2 class="text-2xl sm:text-3xl font-extrabold" style="color:#b85c38" data-aos="fade-up">Collaborated Partner</h2>
       <p class="text-sm mt-3 max-w-xl mx-auto" style="color:#6b5347;font-weight:300">We aim to partner with organisations, governments, and individuals to achieve shared environmental goals.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
