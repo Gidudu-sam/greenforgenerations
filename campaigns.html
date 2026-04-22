@@ -32,18 +32,16 @@
     .rounded-2xl.bg-white,.bg-white.rounded-2xl{background-color:#e0d8cc !important}
     .hero-bg{background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08305.jpg');background-size:cover;background-position:center !important;background-color:#2d5428 !important}
     .nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#2d5428;transition:width .3s}.nav-link:hover::after{width:100%}
-    img{max-width:100%;display:block}
+    img{max-width:100%;height:auto;display:block}
     .img-cover{width:100%;height:100%;object-fit:cover;object-position:center}
     /* White text on green backgrounds */
     [style*='background:#2d5428'] h1,[style*='background:#2d5428'] h2,[style*='background:#2d5428'] h3,[style*='background:#2d5428'] h4,[style*='background:#2d5428'] p,[style*='background:#2d5428'] span,[style*='background:#1e3b1c'] h1,[style*='background:#1e3b1c'] h2,[style*='background:#1e3b1c'] h3,[style*='background:#1e3b1c'] p{color:#fff !important}
     .hero-bg h1,.hero-bg p,.hero-bg span{color:#fff !important}
     #scrollTopBtn{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:#2d5428;color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.25)}
     #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
-    /* Image fix — scoped to content cards only */
-    .rounded-2xl .overflow-hidden img,
-    .gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s}
-    .rounded-2xl:hover .overflow-hidden img,
-    .gallery-item:hover img{transform:scale(1.05)}
+    .media-frame{overflow:hidden}
+    .media-frame>img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s}
+    .rounded-2xl:hover .media-frame>img{transform:scale(1.05)}
     nav img{height:56px;width:auto;object-fit:contain;transform:none !important} footer img{height:48px;width:auto;object-fit:contain;transform:none !important}
     .campaign-card:hover .campaign-img{transform:scale(1.05)}
     .campaign-img{transition:transform .5s}
@@ -113,8 +111,8 @@
 
       <!-- Planting Trees -->
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up">
-        <div class="overflow-hidden" style="height:220px">
-          <img src="assets/DSC08233.jpg" alt="Planting Trees" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+        <div class="media-frame" style="height:260px">
+          <img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="object-position:center 30%" />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
@@ -133,8 +131,8 @@
 
       <!-- Clean Beach -->
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up" data-aos-delay="100">
-        <div class="overflow-hidden" style="height:220px">
-          <img src="assets/DSC08536.JPG" alt="Clean Beach" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+        <div class="media-frame" style="height:260px">
+          <img src="assets/beach cleaning.jpg" alt="Clean Beach" style="object-position:center 20%" />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#9b8579">Marine Action</span>
@@ -153,8 +151,8 @@
 
       <!-- Protect Water Bodies -->
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up" data-aos-delay="200">
-        <div class="overflow-hidden" style="height:220px">
-          <img src="assets/DSC08731 (2).JPG" alt="Protect Water Bodies" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+        <div class="media-frame" style="height:260px">
+          <img src="assets/cleanwaterbodies.JPG" alt="Protect Water Bodies" style="object-position:center 25%" />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
@@ -174,7 +172,6 @@
     </div>
   </div>
 </section>
-
 <!-- PLASTIC FREE SOLUTIONS -->
 <section style="background:#e0d8cc">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

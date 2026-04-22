@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Green for Generations gallery — photos from our tree planting, beach cleanups, and community events." />
+  <meta name="description" content="Green for Generations gallery � photos from our tree planting, beach cleanups, and community events." />
   <title>Green for Generations | Gallery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,8 +14,8 @@
     @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 35 Light'),local('AvenirLTStd-Light'),local('Avenir-Light');font-weight:300;font-style:normal}
     @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 65 Medium'),local('AvenirLTStd-Medium'),local('Avenir-Medium');font-weight:500;font-style:normal}
     @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 85 Heavy'),local('AvenirLTStd-Heavy'),local('Avenir-Heavy');font-weight:800;font-style:normal}
-    html{scroll-behavior:smooth}
-    body{background:#d8cdbd;color:#6b5347;font-family:'AvenirLT','Avenir','Century Gothic','Trebuchet MS',sans-serif}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{background:#d8cdbd;color:#6b5347;font-family:'AvenirLT','Avenir','Century Gothic','Trebuchet MS',sans-serif;overflow-x:hidden}
     h1,h2,h3,h4,.font-extrabold,.font-bold{font-weight:800;color:#b85c38}
     p,.font-medium,.leading-relaxed{font-weight:300;color:#6b5347}
     .font-semibold,label,nav a{font-weight:500;color:#8b4513}
@@ -32,15 +32,15 @@
     .rounded-2xl.bg-white,.bg-white.rounded-2xl{background-color:#e0d8cc !important}
     .hero-bg{background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08233.jpg');background-size:cover;background-position:center !important;background-color:#2d5428 !important}
     .nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#2d5428;transition:width .3s}.nav-link:hover::after{width:100%}
-    img{max-width:100%;display:block}
+    img{max-width:100%;height:auto;display:block}
     .img-cover{width:100%;height:100%;object-fit:cover;object-position:center}
     /* White text on green backgrounds */
     [style*='background:#2d5428'] h1,[style*='background:#2d5428'] h2,[style*='background:#2d5428'] h3,[style*='background:#2d5428'] h4,[style*='background:#2d5428'] p,[style*='background:#2d5428'] span,[style*='background:#1e3b1c'] h1,[style*='background:#1e3b1c'] h2,[style*='background:#1e3b1c'] h3,[style*='background:#1e3b1c'] p{color:#fff !important}
     .hero-bg h1,.hero-bg p,.hero-bg span{color:#fff !important}
     #scrollTopBtn{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:#2d5428;color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.25)}
     #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
-    .gallery-item{cursor:pointer;overflow:hidden;border-radius:16px;position:relative;box-shadow:0 4px 15px rgba(10,20,47,.08);background:#c8c0b0}
-    .gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s}
+    .gallery-item{cursor:pointer;overflow:hidden;border-radius:16px;position:relative;box-shadow:0 4px 15px rgba(10,20,47,.08);background:#c8c0b0;height:260px}
+    .gallery-item img{width:100%;height:100% !important;object-fit:cover;object-position:center top;display:block;transition:transform .5s}
     .gallery-item:hover img{transform:scale(1.05)}
     .filter-btn.active{background:#2d5428;color:#fff;border-color:#2d5428}
     #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:1rem}
@@ -107,45 +107,45 @@
   </div>
 </section>
 
-<!-- MASONRY GRID -->
+<!-- GALLERY GRID -->
 <section class="bg-white pb-20 pt-4">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="galleryGrid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="galleryGrid">
 
-      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Tree planting session — City Park" style="height:280px" onclick="openLightbox(0)">
-        <img src="assets/DSC08233.jpg" alt="Tree planting session" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="planting" data-caption="Tree planting session � City Park" onclick="openLightbox(0)">
+        <img src="assets/DSC08233.jpg" alt="Tree planting session" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="community" data-caption="Volunteers gathering before the event" style="height:340px" onclick="openLightbox(1)">
-        <img src="assets/DSC08298.JPG" alt="Volunteers gathering" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      <div class="gallery-item" data-category="community" data-caption="Volunteers gathering before the event" onclick="openLightbox(1)">
+        <img src="assets/DSC08298.JPG" alt="Volunteers gathering" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Hands in the soil — restoration work" style="height:260px" onclick="openLightbox(2)">
-        <img src="assets/DSC08305.jpg" alt="Restoration work" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="planting" data-caption="Hands in the soil restoration work" onclick="openLightbox(2)">
+        <img src="assets/beach cleaning.jpg" alt="Restoration work" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="beach" data-caption="Beach cleanup drive — Sunset Beach" style="height:320px" onclick="openLightbox(3)">
-        <img src="assets/DSC08450 (1).jpg" alt="Beach cleanup drive" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="beach" data-caption="Beach cleanup drive  Sunset Beach" onclick="openLightbox(3)">
+        <img src="assets/boat1.jpg" alt="Beach cleanup drive" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="events" data-caption="Youth climate workshop in session" style="height:280px" onclick="openLightbox(4)">
-        <img src="assets/DSC08536.JPG" alt="Youth climate workshop" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="events" data-caption="Youth climate workshop in session" onclick="openLightbox(4)">
+        <img src="assets/newone.JPG" alt="Youth climate workshop" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="community" data-caption="Community coming together for the environment" style="height:360px" onclick="openLightbox(5)">
-        <img src="assets/DSC08694.JPG" alt="Community event" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      <div class="gallery-item" data-category="community" data-caption="Community coming together for the environment" onclick="openLightbox(5)">
+        <img src="assets/DSC08694.JPG" alt="Community event" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="beach" data-caption="Collecting waste along the coastline" style="height:300px" onclick="openLightbox(6)">
-        <img src="assets/DSC08731 (2).JPG" alt="Coastline cleanup" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="beach" data-caption="Collecting waste along the coastline" onclick="openLightbox(6)">
+        <img src="assets/DSC08731 (2).JPG" alt="Coastline cleanup" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="events" data-caption="Volunteers celebrating after a successful day" style="height:270px" onclick="openLightbox(7)">
-        <img src="assets/DSC08753 (1).JPG" alt="Volunteers celebrating" style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+      <div class="gallery-item" data-category="events" data-caption="Volunteers celebrating after a successful day" onclick="openLightbox(7)">
+        <img src="assets/DSC08753 (1).JPG" alt="Volunteers celebrating" />
       </div>
 
-      <div class="gallery-item break-inside-avoid" data-category="planting" data-caption="Recent tree planting — April 2025" style="height:310px" onclick="openLightbox(8)">
-        <img src="assets/IMG_20250416_154212.jpg" alt="Tree planting April 2025" style="width:100%;height:100%;object-fit:cover;object-position:center" />
+      <div class="gallery-item" data-category="planting" data-caption="Recent tree planting � April 2025" onclick="openLightbox(8)">
+        <img src="assets/tree plantin 2.JPG" alt="Tree planting April 2025" />
       </div>
 
     </div>
@@ -165,7 +165,7 @@
 <section style="background:#2d5428" class="py-16 text-center text-white">
   <div class="max-w-2xl mx-auto px-4">
     <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Be Part of the Story</h2>
-    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">Every photo here represents real UAE volunteers making a real difference. Your moment could be next — join us.</p>
+    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">Every photo here represents real UAE volunteers making a real difference. Your moment could be next � join us.</p>
     <a href="volunteer.html" class="inline-block px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white hover:bg-white hover:text-green-800 transition-colors">Become a Volunteer</a>
   </div>
 </section>
@@ -210,7 +210,7 @@
         <ul class="space-y-3 text-sm">
           <li class="flex items-start gap-3"><i class="fas fa-location-dot text-green-400 mt-0.5"></i><span>United Arab Emirates</span></li>
           <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-400"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
-          <li class="flex items-start gap-3"><i class="fas fa-clock text-green-400 mt-0.5"></i><span>Mon – Fri: 9:00 AM – 5:00 PM</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-clock text-green-400 mt-0.5"></i><span>Mon � Fri: 9:00 AM � 5:00 PM</span></li>
         </ul>
       </div>
     </div>
