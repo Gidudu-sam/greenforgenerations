@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
   <meta name="description" content="Green for Generations gallery � photos from our tree planting, beach cleanups, and community events." />
   <title>Green for Generations | Gallery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2-family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script>tailwind={config:{theme:{extend:{colors:{forest:{DEFAULT:'#2d5428',light:'#3a6e34',dark:'#1e3b1c'},sky:{DEFAULT:'#d8cdbd'}},fontFamily:{sans:['AvenirLT','Avenir','Century Gothic','Trebuchet MS','sans-serif']}}}}}</script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -161,7 +161,7 @@
 <section style="background:#2d5428" class="py-16 text-center text-white">
   <div class="max-w-2xl mx-auto px-4">
     <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Be Part of the Story</h2>
-    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">Every photo here represents real UAE volunteers making a real difference. Your moment could be next  join us.</p>
+    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">Every photo here represents real Uganda volunteers making a real difference. Your moment could be next  join us.</p>
     <a href="campaigns.html#volunteer-signup" class="inline-block px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white hover:bg-white hover:text-green-800 transition-colors">Become a Volunteer</a>
   </div>
 </section>
@@ -174,7 +174,7 @@
         <div class="flex items-center mb-4">
           <img src="assets/logo/logo-white.jpeg" alt="Green for Generations" class="h-12 w-auto" />
         </div>
-        <p class="text-sm leading-relaxed mb-6 text-gray-400">A youth-led environmental volunteering organisation founded by UAE volunteers, dedicated to conservation, sustainable living, and a greener future in the Emirates and Africa.</p>
+        <p class="text-sm leading-relaxed mb-6 text-gray-400">A youth-led environmental volunteering organisation founded by Uganda volunteers, dedicated to conservation, sustainable living, and a greener future in the Uganda and Africa.</p>
         <div class="flex gap-3">
           <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-facebook-f text-sm"></i></a>
           <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-twitter text-sm"></i></a>
@@ -203,10 +203,13 @@
       </div>
       <div>
         <h4 class="text-white font-bold text-base mb-4">Contact Us</h4>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-3"><i class="fas fa-location-dot text-green-400 mt-0.5"></i><span>United Arab Emirates</span></li>
-          <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-400"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
-          <li class="flex items-start gap-3"><i class="fas fa-clock text-green-400 mt-0.5"></i><span>Mon Fri: 9:00 AM  5:00 PM</span></li>
+        <ul class="space-y-3 text-sm" style="color:#b8a49c">
+          <li class="flex items-start gap-3"><i class="fas fa-location-dot mt-0.5" style="color:#3a6e34"></i><span>Kawempe, Kampala, Uganda</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-map-pin mt-0.5" style="color:#3a6e34"></i><span>PO BOX 208337, Kampala</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-phone" style="color:#3a6e34"></i><a href="tel:+256789953230" class="hover:text-white">+256 789 953 230</a></li>
+          <li class="flex items-center gap-3"><i class="fab fa-whatsapp" style="color:#3a6e34"></i><a href="https://wa.me/256789953230" class="hover:text-white">+256 789 953 230</a></li>
+          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
+          <li class="flex items-start gap-3"><i class="fas fa-clock mt-0.5" style="color:#3a6e34"></i><span>Mon &ndash; Fri: 9:00 AM - 5:00 PM</span></li>
         </ul>
       </div>
     </div>
@@ -219,7 +222,7 @@
 <script>
   // Mobile menu
   const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu'),menuIcon=document.getElementById('menuIcon');
-  menuBtn.addEventListener('click',()=>{const o=!mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden');menuIcon.className=o?'fas fa-bars text-xl':'fas fa-times text-xl';});
+  menuBtn.addEventListener('click',()=>{const o=!mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden');menuIcon.className=o-'fas fa-bars text-xl':'fas fa-times text-xl';});
   document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{mobileMenu.classList.add('hidden');menuIcon.className='fas fa-bars text-xl';}));
 
   // Scroll to top
@@ -236,7 +239,7 @@
       btn.classList.add('active');btn.classList.remove('text-gray-600');
       const f=btn.dataset.filter;
       items.forEach(item=>{
-        item.style.display=(f==='all'||item.dataset.category===f)?'':'none';
+        item.style.display=(f==='all'||item.dataset.category===f)-'':'none';
       });
     });
   });
