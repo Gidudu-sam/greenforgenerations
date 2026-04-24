@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Green for Generations campaigns ? tree planting, beach cleanups, water protection and more." />
+  <title>Green for Generations | Campaigns</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2-family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>tailwind={config:{theme:{extend:{colors:{forest:{DEFAULT:'#2d5428',light:'#3a6e34',dark:'#1e3b1c'},sky:{DEFAULT:'#d8cdbd'}},fontFamily:{sans:['AvenirLT','Avenir','Century Gothic','Trebuchet MS','sans-serif']}}}}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 35 Light'),local('AvenirLTStd-Light'),local('Avenir-Light');font-weight:300;font-style:normal}
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 65 Medium'),local('AvenirLTStd-Medium'),local('Avenir-Medium');font-weight:500;font-style:normal}
+    @font-face{font-family:'AvenirLT';src:local('Avenir LT Std 85 Heavy'),local('AvenirLTStd-Heavy'),local('Avenir-Heavy');font-weight:800;font-style:normal}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{background:#d8cdbd;color:#6b5347;font-family:'AvenirLT','Avenir','Century Gothic','Trebuchet MS',sans-serif;overflow-x:hidden}
+    h1,h2,h3,h4,.font-extrabold,.font-bold{font-weight:800;color:#b85c38}
+    p,.font-medium,.leading-relaxed{font-weight:300;color:#6b5347}
+    .font-semibold,label,nav a{font-weight:500;color:#8b4513}
+    [class*="text-gray-"]{color:#6b5347 !important}
+    .text-gray-900,.text-gray-800{color:#b85c38 !important}
+    .text-gray-700{color:#8b4513 !important}
+    .text-gray-600{color:#6b5347 !important}
+    .text-gray-500{color:#7a5c4e !important}
+    .text-gray-400{color:#9b8579 !important}
+    .text-gray-300{color:#a89080 !important}
+    body>nav,nav.fixed{background-color:#fff !important}
+    .bg-white{background-color:#d8cdbd !important}
+    section.bg-white{background-color:#d8cdbd !important}
+    .rounded-2xl.bg-white,.bg-white.rounded-2xl{background-color:#e0d8cc !important}
+    .hero-bg{background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08305.jpg');background-size:cover;background-position:center !important;background-color:#2d5428 !important}
+    .nav-link{position:relative}.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#2d5428;transition:width .3s}.nav-link:hover::after{width:100%}
+    img{max-width:100%;height:auto;display:block}
+    .img-cover{width:100%;height:100%;object-fit:cover;object-position:center}
+    /* White text on green backgrounds */
+    [style*='background:#2d5428'] h1,[style*='background:#2d5428'] h2,[style*='background:#2d5428'] h3,[style*='background:#2d5428'] h4,[style*='background:#2d5428'] p,[style*='background:#2d5428'] span,[style*='background:#1e3b1c'] h1,[style*='background:#1e3b1c'] h2,[style*='background:#1e3b1c'] h3,[style*='background:#1e3b1c'] p{color:#fff !important}
+    .hero-bg h1,.hero-bg p,.hero-bg span{color:#fff !important}
+    #scrollTopBtn{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:#2d5428;color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:999;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+    #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
+    .media-frame{overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .media-frame>img{width:100%;height:auto;display:block;transition:transform .5s}
+    .rounded-2xl:hover .media-frame>img{transform:scale(1.05)}
+    nav img{height:56px !important;width:auto !important;object-fit:contain;transform:none !important} footer img{height:56px !important;width:auto !important;object-fit:contain;transform:none !important}
+    .campaign-card:hover .campaign-img{transform:scale(1.05)}
+    .campaign-img{transition:transform .5s}
+    .filter-btn.active{background:#2d5428;color:#fff}
+    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
+    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-1">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo/Original New LOGO updated (2)-1.png" alt="Green for Generations" class="w-48 h-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">About</a>
+        <a href="campaigns.html" class="nav-link text-sm font-semibold" style="color:#2d5428">Campaigns</a>
+        <a href="gallery.html" class="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Gallery</a>
+        <a href="contact us.html" class="text-sm font-semibold text-white px-5 py-2 rounded-full" style="background:#2d5428">Contact Us</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 text-gray-700"><i id="menuIcon" class="fas fa-bars text-xl"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-1">
+    <a href="index.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Home</a>
+    <a href="about.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">About</a>
+    <a href="campaigns.html" class="mobile-link block py-2 px-3 rounded-lg font-semibold" style="color:#2d5428">Campaigns</a>
+    <a href="gallery.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Gallery</a>
+    <a href="contact us.html" class="mobile-link block mt-2 py-2 px-3 rounded-lg text-white text-center font-semibold" style="background:#2d5428">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section style="background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/DSC08305.jpg');background-size:cover;background-position:center;background-color:#2d5428;min-height:420px;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center">
+  <div class="px-4 sm:px-6 lg:px-8 text-white">
+    <h1 class="text-5xl sm:text-6xl font-extrabold mb-4" style="color:#fff !important">Our Campaigns</h1>
+    <p class="text-base max-w-xl mx-auto" style="color:rgba(255,255,255,.85);font-weight:300">Real action, real impact. Explore the campaigns driving environmental change across Uganda and beyond.</p>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+
+<!-- STATS BAR -->
+<section style="background:#1e3b1c" class="text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-4xl font-extrabold text-white mb-1" data-target="3" data-suffix="">0</div><div class="text-xs uppercase tracking-widest" style="color:#b8d4b0">Active Campaigns</div></div>
+      <div><div class="text-4xl font-extrabold text-white mb-1" data-target="106" data-suffix="">0</div><div class="text-xs uppercase tracking-widest" style="color:#b8d4b0">Trees Planted</div></div>
+      <div><div class="text-4xl font-extrabold text-white mb-1" data-target="3" data-suffix="">0</div><div class="text-xs uppercase tracking-widest" style="color:#b8d4b0">Beaches Cleaned</div></div>
+      <div><div class="text-4xl font-extrabold text-white mb-1" data-target="45" data-suffix="+">0</div><div class="text-xs uppercase tracking-widest" style="color:#b8d4b0">Volunteers</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPAIGNS -->
+<section class="py-20" style="background:#d8cdbd">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#3a6e34">What We're Working On</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-3" style="color:#b85c38" data-aos="fade-up">Our Campaigns</h2>
+      <p class="text-sm max-w-xl mx-auto" style="color:#6b5347;font-weight:300">Active campaigns where your time and energy create measurable environmental impact across Uganda.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Planting Trees -->
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up">
+        <div class="media-frame" style="height:260px">
+          <img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="object-position:center 30%" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
+          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Planting Trees</h3>
+          <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">"Rooting Hope, Growing the Future" ? Reforesting urban parks and degraded land through community-led tree planting drives. We've planted over 2,400 trees and counting.</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs mb-1" style="color:#9b8579"><span>Progress</span><span>106 / 500 trees</span></div>
+            <div class="w-full rounded-full h-2" style="background:#d8cdbd"><div class="h-2 rounded-full" style="width:21%;background:#2d5428"></div></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs" style="color:#b8a49c"><i class="fas fa-users mr-1"></i>142 volunteers</span>
+            <a href="#volunteer-signup" class="text-sm font-semibold px-4 py-2 rounded-full text-white" style="background:#2d5428">Get Involved</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clean Beach -->
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up" data-aos-delay="100">
+        <div class="media-frame" style="height:260px">
+          <img src="assets/beach_cleaning.jpg" alt="Clean Beach" style="object-position:center" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#9b8579">Marine Action</span>
+          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Clean Beach</h3>
+          <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">"Keeping Our Shores Pristine for Future Generations" ? Removing plastic waste from UAE coastlines and educating communities on marine health. 18 beaches cleaned so far.</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs mb-1" style="color:#9b8579"><span>Progress</span><span>3 / 10 beaches</span></div>
+            <div class="w-full rounded-full h-2" style="background:#d8cdbd"><div class="h-2 rounded-full" style="width:30%;background:#9b8579"></div></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs" style="color:#b8a49c"><i class="fas fa-users mr-1"></i>98 volunteers</span>
+            <a href="#volunteer-signup" class="text-sm font-semibold px-4 py-2 rounded-full text-white" style="background:#2d5428">Get Involved</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Protect Water Bodies -->
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up" data-aos-delay="200">
+        <div class="media-frame" style="height:260px">
+          <img src="assets/boat1.jpg" alt="Protect Water Bodies" style="object-position:center" />
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
+          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Protect Water Bodies</h3>
+          <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">"Guardians of Our Rivers, Lakes, and Wetlands" ? Monitoring water quality, removing invasive species, and advocating for stronger freshwater protections across Uganda.</p>
+          <div class="mb-4">
+            <div class="flex justify-between text-xs mb-1" style="color:#9b8579"><span>Progress</span><span>8 / 15 rivers monitored</span></div>
+            <div class="w-full rounded-full h-2" style="background:#d8cdbd"><div class="h-2 rounded-full" style="width:53%;background:#3a6e34"></div></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs" style="color:#b8a49c"><i class="fas fa-users mr-1"></i>64 volunteers</span>
+            <a href="#volunteer-signup" class="text-sm font-semibold px-4 py-2 rounded-full text-white" style="background:#2d5428">Get Involved</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- PLASTIC FREE SOLUTIONS -->
+<section style="background:#e0d8cc">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-10" style="color:#b85c38" data-aos="fade-up">Turning Everyday Decisions<br />into Plastic-Free Solutions</h2>
+    <div class="space-y-8">
+      <div class="flex gap-6">
+        <span class="text-3xl font-extrabold flex-shrink-0" style="color:#b85c38">01</span>
+        <div>
+          <h4 class="font-extrabold text-base mb-2" style="color:#b85c38">Participating in Clean-Up Efforts</h4>
+          <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Joining coastal and beach clean-up activities directly removes plastic from the environment. Such efforts also raise awareness and foster a sense of responsibility within communities.</p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <span class="text-3xl font-extrabold flex-shrink-0" style="color:#b85c38">02</span>
+        <div>
+          <h4 class="font-extrabold text-base mb-2" style="color:#b85c38">Reducing Single-Use Plastics</h4>
+          <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Limiting the use of single-use plastics like straws, bags, and bottles is a crucial first step. Choosing reusable alternatives such as cloth bags, bottles, and glass containers can significantly reduce the amount of plastic waste that ends up in oceans.</p>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <span class="text-3xl font-extrabold flex-shrink-0" style="color:#b85c38">03</span>
+        <div>
+          <h4 class="font-extrabold text-base mb-2" style="color:#b85c38">Improving Plastic Recycling</h4>
+          <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Recycling plastic properly ensures it is reused instead of ending up in landfills. Supporting recycling programs and increasing public awareness about what can and cannot be recycled are essential steps in managing plastic waste more effectively.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Did you know -->
+    <div class="mt-12 text-center">
+      <h3 class="text-2xl font-extrabold mb-4" style="color:#b85c38">Did you know-</h3>
+      <p class="text-sm leading-relaxed max-w-xl mx-auto" style="color:#6b5347;font-weight:300">Sustainable practices like reusing materials, recycling plastic, and choosing eco-friendly products can dramatically reduce the flow of plastic into our oceans.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BECOME OUR VOLUNTEER -->
+<section id="volunteer-signup" class="py-20" style="background:#e0d8cc">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-2" style="color:#2d5428" data-aos="fade-up">Become Our Volunteer</h2>
+      <div class="w-16 h-1 mx-auto rounded-full mb-4" style="background:#c8a84b"></div>
+      <p class="text-sm max-w-lg mx-auto" style="color:#6b5347;font-weight:300">Join our community of changemakers and contribute to meaningful environmental projects.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-14 items-start mt-14">
+      <!-- Left: text -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-4" style="color:#2d5428">Make a Difference Today</h3>
+        <p class="text-sm leading-relaxed mb-5" style="color:#6b5347;font-weight:300">Volunteering with us is a rewarding experience that allows you to connect with nature, meet like-minded individuals, and create tangible environmental impact. Whether you can dedicate a few hours or become a regular volunteer, every contribution counts.</p>
+        <p class="text-sm leading-relaxed mb-5" style="color:#6b5347;font-weight:300">Our volunteers are the backbone of our organization. They bring passion, energy, and diverse skills that drive our campaigns forward. Join us and be part of the solution for a healthier planet.</p>
+        <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Fill out the form to join our volunteer network and we'll contact you with opportunities that match your interests and availability.</p>
+      </div>
+      <!-- Right: form -->
+      <div class="rounded-2xl p-8 shadow-sm" style="background:#d8cdbd">
+        <h4 class="font-extrabold text-lg mb-6" style="color:#2d5428">Volunteer Sign Up</h4>
+        <form id="campaignVolForm" class="space-y-5" onsubmit="handleVolSubmit(event)">
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" style="color:#b85c38">Full Name</label>
+            <input type="text" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none" style="border-color:#c8bdb0;background:#e8e0d4;color:#6b5347" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" style="color:#b85c38">Email Address</label>
+            <input type="email" required placeholder="your@email.com" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none" style="border-color:#c8bdb0;background:#e8e0d4;color:#6b5347" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" style="color:#b85c38">Phone Number</label>
+            <input type="tel" placeholder="+971 00 000 0000" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none" style="border-color:#c8bdb0;background:#e8e0d4;color:#6b5347" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" style="color:#b85c38">Area of Interest</label>
+            <select required class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none" style="border-color:#c8bdb0;background:#e8e0d4;color:#6b5347">
+              <option value="" disabled selected>Select a campaign</option>
+              <option>Tree Planting</option>
+              <option>Clean Beach</option>
+              <option>Protect Water Bodies</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" style="color:#b85c38">Why do you want to volunteer with us-</label>
+            <textarea rows="4" placeholder="Tell us your motivation..." class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none resize-none" style="border-color:#c8bdb0;background:#e8e0d4;color:#6b5347"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl font-bold text-white text-sm tracking-wide transition-opacity hover:opacity-90" style="background:#2d5428">Join as Volunteer</button>
+        </form>
+        <div id="volSuccess" class="hidden text-center py-10">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background:#2d5428"><i class="fas fa-check text-2xl text-white"></i></div>
+          <h4 class="font-extrabold text-lg mb-2" style="color:#2d5428">Thank You!</h4>
+          <p class="text-sm" style="color:#6b5347;font-weight:300">We'll be in touch with opportunities that match your interests.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1e3b1c">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center mb-5"><img src="assets/logo/Original New LOGO updated (2)-2.png" alt="Green for Generations" class="h-40 w-auto" /></div>
+        <p class="text-sm leading-relaxed mb-6" style="color:#7a5c4e;font-weight:300">A youth-led environmental volunteering organisation founded by Uganda volunteers, dedicated to conservation, sustainable living, and a greener future in the Uganda and Africa.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-facebook-f text-sm text-white"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-twitter text-sm text-white"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-instagram text-sm text-white"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors" style="background:rgba(255,255,255,.1)"><i class="fab fa-youtube text-sm text-white"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Quick Links</h4>
+        <ul class="space-y-2.5 text-sm" style="color:#b8a49c">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Campaigns</a></li>
+          <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+          <li><a href="contact us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Our Campaigns</h4>
+        <ul class="space-y-2.5 text-sm" style="color:#b8a49c">
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Clean Beach</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors">Protect Water Bodies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-base mb-4">Contact Us</h4>
+        <ul class="space-y-3 text-sm" style="color:#b8a49c">
+          <li class="flex items-start gap-3"><i class="fas fa-location-dot mt-0.5" style="color:#3a6e34"></i><span>Kawempe, Kampala, Uganda</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-map-pin mt-0.5" style="color:#3a6e34"></i><span>PO BOX 208337, Kampala</span></li>
+          <li class="flex items-center gap-3"><i class="fas fa-phone" style="color:#3a6e34"></i><a href="tel:+256789953230" class="hover:text-white">+256 789 953 230</a></li>
+          <li class="flex items-center gap-3"><i class="fab fa-whatsapp" style="color:#3a6e34"></i><a href="https://wa.me/256789953230" class="hover:text-white">+256 789 953 230</a></li>
+          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
+          <li class="flex items-start gap-3"><i class="fas fa-clock mt-0.5" style="color:#3a6e34"></i><span>Mon &ndash; Fri: 9:00 AM - 5:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-5 text-center text-sm" style="color:#9b8579">&copy; 2026 Green for Generations Volunteering. All rights reserved.</div>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up text-sm"></i></button>
+
+<script>
+  const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu'),menuIcon=document.getElementById('menuIcon');
+  menuBtn.addEventListener('click',()=>{const o=!mobileMenu.classList.contains('hidden');mobileMenu.classList.toggle('hidden');menuIcon.className=o?'fas fa-bars text-xl':'fas fa-times text-xl';});
+  document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{mobileMenu.classList.add('hidden');menuIcon.className='fas fa-bars text-xl';}));
+  const s=document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll',()=>s.classList.toggle('visible',window.pageYOffset>400));
+  s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  function handleVolSubmit(e) {
+    e.preventDefault();
+    document.getElementById('campaignVolForm').classList.add('hidden');
+    document.getElementById('volSuccess').classList.remove('hidden');
+  }
+</script>
+<script>
+  // Countup animation
+  function animateCountup() {
+    document.querySelectorAll('[data-target]').forEach(el => {
+      const target = +el.dataset.target;
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const step = Math.max(target / (duration / 16), 0.5);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current) + suffix;
+      }, 16);
+    });
+  }
+  const statEls = document.querySelectorAll('[data-target]');
+  if (statEls.length) {
+    const statsParent = statEls[0].closest('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCountup(); observer.disconnect(); }});
+    }, { threshold: 0.2 });
+    if (statsParent) observer.observe(statsParent);
+  }
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:800,easing:'ease-out-cubic',once:true,offset:80});</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
