@@ -93,6 +93,11 @@
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
 
+    /* Pillar card icon hover scale */
+    .pillar-card:hover .pillar-icon{transform:scale(1.12) rotate(-5deg)}
+    .pillar-card{transition:transform .3s ease,box-shadow .3s ease}
+    .pillar-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(45,84,40,.18) !important}
+
     /* ===== PREMIUM HERO CAROUSEL ===== */
     #heroCarousel{position:relative;min-height:100vh;overflow:hidden}
 
@@ -118,6 +123,9 @@
     /* Dots */
     .carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .3s,transform .3s;padding:0}
     .carousel-dot.active{background:#fff;transform:scale(1.3)}
+    /* Pillar card hover effects */
+    .pillar-card:hover{transform:translateY(-6px) !important;box-shadow:0 16px 40px rgba(45,84,40,.18) !important}
+    .pillar-card:hover .pillar-icon{transform:scale(1.1) rotate(-5deg)}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
@@ -182,20 +190,20 @@
     <p class="text-xs font-semibold mb-4" style="color:#9b8579" data-aos="fade-up">Founded by Uganda volunteers based in the UAE &mdash; driven by passion for the environment.</p>
     <p class="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-4" style="color:#6b5347;font-weight:300" data-aos="fade-up" data-aos-delay="100">We are a youth-led environmental organisation dedicated to tree planting, lake shore clean ups, and climate action &mdash; empowering communities to build a greener future in Uganda and Africa.</p>
     <p class="text-base sm:text-lg font-extrabold italic mb-10" style="color:#2d5428" data-aos="fade-up" data-aos-delay="150">"Protect Uganda's ecosystems, one volunteer at a time."</p>
-    <div class="grid md:grid-cols-3 gap-8 mb-12">
-      <div class="flex flex-col items-center text-center" data-aos="fade-up">
-        <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background:#2d5428"><i class="fas fa-tree text-xl text-white"></i></div>
-        <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Conservation &amp; Restoration</h3>
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="rounded-2xl p-7 flex flex-col items-center text-center transition-all duration-300 pillar-card" style="background:#e0d8cc;box-shadow:0 4px 20px rgba(45,84,40,.08);border-top:3px solid #2d5428" data-aos="fade-up">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300" style="background:#2d5428;box-shadow:0 6px 20px rgba(45,84,40,.3)"><i class="fas fa-tree text-2xl text-white"></i></div>
+        <h3 class="font-extrabold text-base mb-3" style="color:#b85c38">Conservation &amp; Restoration</h3>
         <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Preserving and restoring natural ecosystems to maintain biodiversity and eco-balance.</p>
       </div>
-      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background:#2d5428"><i class="fas fa-hands-helping text-xl text-white"></i></div>
-        <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Youth Volunteering</h3>
+      <div class="rounded-2xl p-7 flex flex-col items-center text-center transition-all duration-300 pillar-card" style="background:#e0d8cc;box-shadow:0 4px 20px rgba(45,84,40,.08);border-top:3px solid #3a6e34" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300" style="background:#2d5428;box-shadow:0 6px 20px rgba(45,84,40,.3)"><i class="fas fa-hands-helping text-2xl text-white"></i></div>
+        <h3 class="font-extrabold text-base mb-3" style="color:#b85c38">Youth Volunteering</h3>
         <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Inspiring young people to lead environmental change through hands-on community action.</p>
       </div>
-      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background:#2d5428"><i class="fas fa-seedling text-xl text-white"></i></div>
-        <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Sustainability</h3>
+      <div class="rounded-2xl p-7 flex flex-col items-center text-center transition-all duration-300 pillar-card" style="background:#e0d8cc;box-shadow:0 4px 20px rgba(45,84,40,.08);border-top:3px solid #2d5428" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300" style="background:#2d5428;box-shadow:0 6px 20px rgba(45,84,40,.3)"><i class="fas fa-seedling text-2xl text-white"></i></div>
+        <h3 class="font-extrabold text-base mb-3" style="color:#b85c38">Sustainability</h3>
         <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Driving eco-friendly practices that protect our planet for generations to come.</p>
       </div>
     </div>
@@ -227,12 +235,26 @@
         </div>
         <div class="flex flex-wrap gap-4">
           <a href="about.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white text-sm" style="background:#9b8579">Read More</a>
-          <a href="gallery.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm border-2" style="color:#2d5428;border-color:#2d5428"><i class="fas fa-images text-base"></i> Watch Video</a>
+          <button onclick="openVideoModal()" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm border-2 cursor-pointer" style="color:#2d5428;border-color:#2d5428;background:transparent"><i class="fas fa-play-circle text-base"></i> Watch Video</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;align-items:center;justify-content:center;padding:1rem">
+  <div style="position:relative;width:100%;max-width:900px;margin:auto">
+    <!-- Close button -->
+    <button onclick="closeVideoModal()" style="position:absolute;top:-3rem;right:0;background:rgba(255,255,255,.15);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10" aria-label="Close video">
+      <i class="fas fa-times"></i>
+    </button>
+    <!-- Video embed -->
+    <div style="padding-top:56%;position:relative;border-radius:12px;overflow:hidden">
+      <iframe id="videoIframe" src="" style="border:0;max-width:100%;position:absolute;top:0;left:0;height:100%;width:100%;border-radius:12px" allowFullScreen="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+</div>
 
 <!-- WE TAKE ACTION SPLIT -->
 <section class="overflow-hidden" style="background:#2d5428">
@@ -429,7 +451,7 @@
           <li><a href="gallery.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Gallery</a></li>
           <li><a href="contact us.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Contact Us</a></li>
         </ul>
-      </div>
+      </div>did 
 
       <!-- Col 3: Our Campaigns -->
       <div>
@@ -561,6 +583,28 @@
     document.getElementById('newsletterForm').classList.add('hidden');
     document.getElementById('newsletterSuccess').classList.remove('hidden');
   }
+</script>
+<script>
+  function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoIframe');
+    iframe.src = 'https://player.vdocipher.com/v2/?otp=20160313versUSE3232lxc4eLX1qadOYKYuGfRi4yYCDvnGdZWQJ23VYDoqFqBXy&playbackInfo=eyJ2aWRlb0lkIjoiNjEyYTVlYTJhNWRiNGExNmJiYjk0ZDM2NzJhNzBiZjYifQ==';
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoIframe');
+    iframe.src = ''; // stops the video
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal();
+  });
 </script>
 </body>
 </html>
