@@ -89,9 +89,11 @@
     nav img{height:auto !important;max-height:64px !important;width:auto !important;object-fit:contain;transform:none !important} footer img{height:56px !important;width:auto !important;object-fit:contain;transform:none !important}
     input:focus,select:focus,textarea:focus{outline:none;border-color:#2d5428;box-shadow:0 0 0 3px rgba(45,84,40,.12)}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
-    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    @media(min-width:768px){.rounded-2xl:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.10)}}
     nav.fixed{transition:background .4s ease,box-shadow .4s ease}
     nav.fixed.scrolled{background:rgba(216,205,189,0.96) !important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(45,84,40,.12) !important}
+    .page-hero{min-height:280px}
+    @media(min-width:768px){.page-hero{min-height:420px}}
   </style>
 </head>
 <body class="font-sans antialiased">
@@ -123,7 +125,7 @@
 </nav>
 
 <!-- HERO -->
-<section style="background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/bg photos/IMG-20250513-WA0090.jpg');background-size:cover;background-position:center;background-color:#2d5428;min-height:420px;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center">
+<section class="page-hero" style="background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/bg photos/IMG-20250513-WA0090.jpg');background-size:cover;background-position:center;background-color:#2d5428;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center">
   <div class="px-4 text-white">
     <h1 class="text-3xl sm:text-5xl font-extrabold mb-4" style="color:#fff !important">Contact Us</h1>
     <p class="text-base max-w-xl mx-auto" style="color:rgba(255,255,255,.85);font-weight:300">We'd love to hear from you. Reach out and we'll get back to you as soon as possible.</p>
