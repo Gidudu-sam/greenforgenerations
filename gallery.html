@@ -99,6 +99,8 @@
     #lbCaption{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);color:#e5e7eb;font-size:.85rem;background:rgba(0,0,0,.5);padding:.4rem 1rem;border-radius:999px;white-space:nowrap}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    nav.fixed{transition:background .4s ease,box-shadow .4s ease}
+    nav.fixed.scrolled{background:rgba(216,205,189,0.96) !important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(45,84,40,.12) !important}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -284,7 +286,7 @@
       <!-- Col 1: Logo + description + social -->
       <div>
         <div class="mb-5">
-          <img src="assets/logo/Last black updated LOGO updated.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
+          <img src="assets/logo/Last white updated LOGO updated (1).png" alt="Green Generation Volunteers" class="w-52 sm:w-64 h-auto brightness-0 invert" />
         </div>
         <p class="text-sm leading-relaxed mb-6" style="color:#a89080;font-weight:300">A youth-led environmental organisation in Uganda dedicated to conservation, sustainable living, and a greener future in Africa.</p>
         <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Follow Us</p>
@@ -313,9 +315,9 @@
         <h4 class="text-white font-bold text-base mb-2">Our Campaigns</h4>
         <div class="w-8 h-0.5 mb-5" style="background:#3a6e34"></div>
         <ul class="space-y-2.5 text-sm" style="color:#a89080">
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Restoring Natural Habitats for Native Species</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Lake Shore Clean Ups</a></li>
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Protect Water Bodies</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Coastal Protection</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Youth Climate Action</a></li>
         </ul>
       </div>
@@ -353,6 +355,8 @@
   const scrollBtn=document.getElementById('scrollTopBtn');
   window.addEventListener('scroll',()=>scrollBtn.classList.toggle('visible',window.pageYOffset>400));
   scrollBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const mainNav=document.querySelector('nav.fixed');
+  window.addEventListener('scroll',()=>mainNav.classList.toggle('scrolled',window.pageYOffset>60));
 
   // Photo count
   const allItems=Array.from(document.querySelectorAll('.gallery-item'));

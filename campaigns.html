@@ -35,9 +35,9 @@
     "name": "Green Generation Volunteers Campaigns",
     "url": "https://greengenvolunteers.org/campaigns.html",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Planting Trees", "url": "https://greengenvolunteers.org/campaigns.html"},
+      {"@type": "ListItem", "position": 1, "name": "Restoring Natural Habitats for Native Species", "url": "https://greengenvolunteers.org/campaigns.html"},
       {"@type": "ListItem", "position": 2, "name": "Taasa Enyanja "“ Lake Shore Clean Ups Conservation", "url": "https://greengenvolunteers.org/campaigns.html"},
-      {"@type": "ListItem", "position": 3, "name": "Protect Lake Shore Clean Ups", "url": "https://greengenvolunteers.org/campaigns.html"}
+      {"@type": "ListItem", "position": 3, "name": "Coastal Protection", "url": "https://greengenvolunteers.org/campaigns.html"}
     ]
   }
   </script>
@@ -84,6 +84,8 @@
     .filter-btn.active{background:#2d5428;color:#fff}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    nav.fixed{transition:background .4s ease,box-shadow .4s ease}
+    nav.fixed.scrolled{background:rgba(216,205,189,0.96) !important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(45,84,40,.12) !important}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -150,11 +152,11 @@
       <!-- Planting Trees -->
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up">
         <div class="media-frame" style="height:260px">
-          <img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="object-position:center 30%" />
+          <img src="assets/tree plantin 2.JPG" alt="Restoring Natural Habitats for Native Species" style="object-position:center 30%" />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
-          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Planting Trees</h3>
+          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Restoring Natural Habitats for Native Species</h3>
           <p class="text-sm leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Mangroves are the place where the land learns to breathe with the sea"</p>
           <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">Wetlands and mangroves are powerful tools in the fight against climate change. They store carbon at rates significantly higher than many tropical forests, helping reduce the amount of carbon dioxide in the atmosphere.</p>
           <div class="mb-4">
@@ -205,11 +207,11 @@
       <!-- Protect Lake Shore Clean Ups -->
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#e0d8cc" data-aos="fade-up" data-aos-delay="200">
         <div class="media-frame" style="height:260px">
-          <img src="assets/boat1.jpg" alt="Protect Lake Shore Clean Ups" style="object-position:center" />
+          <img src="assets/boat1.jpg" alt="Coastal Protection" style="object-position:center" />
         </div>
         <div class="p-6">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
-          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Protect Lake Shore Clean Ups</h3>
+          <h3 class="font-extrabold text-lg mb-2" style="color:#b85c38">Coastal Protection</h3>
           <p class="text-xs italic mb-2" style="color:#9b8579">Photo: Captured at the mangroves of Reem Island, Abu Dhabi</p>
           <p class="text-sm leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Where there are mangroves, there's life" — Protecting mangroves is not optional, it's essential for our future.</p>
           <p class="text-sm leading-relaxed mb-2" style="color:#6b5347;font-weight:300">Mangroves serve as rich nurseries for marine life, supporting thousands of fish species and other aquatic organisms. Their dense root systems provide shelter for young fish, helping sustain local fisheries and biodiversity.</p>
@@ -301,7 +303,7 @@
               <option value="" disabled selected>Select a campaign</option>
               <option>Tree Planting</option>
               <option>Clean Beach</option>
-              <option>Protect Lake Shore Clean Ups</option>
+              <option>Coastal Protection</option>
             </select>
           </div>
           <div>
@@ -328,7 +330,7 @@
       <!-- Col 1: Logo + description + social -->
       <div>
         <div class="mb-5">
-          <img src="assets/logo/Last black updated LOGO updated.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
+          <img src="assets/logo/Last white updated LOGO updated (1).png" alt="Green Generation Volunteers" class="w-52 sm:w-64 h-auto brightness-0 invert" />
         </div>
         <p class="text-sm leading-relaxed mb-6" style="color:#a89080;font-weight:300">A youth-led environmental organisation in Uganda dedicated to conservation, sustainable living, and a greener future in Africa.</p>
         <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Follow Us</p>
@@ -357,9 +359,9 @@
         <h4 class="text-white font-bold text-base mb-2">Our Campaigns</h4>
         <div class="w-8 h-0.5 mb-5" style="background:#3a6e34"></div>
         <ul class="space-y-2.5 text-sm" style="color:#a89080">
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Restoring Natural Habitats for Native Species</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Lake Shore Clean Ups</a></li>
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Protect Water Bodies</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Coastal Protection</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Youth Climate Action</a></li>
         </ul>
       </div>
@@ -394,6 +396,8 @@
   const s=document.getElementById('scrollTopBtn');
   window.addEventListener('scroll',()=>s.classList.toggle('visible',window.pageYOffset>400));
   s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const mainNav=document.querySelector('nav.fixed');
+  window.addEventListener('scroll',()=>mainNav.classList.toggle('scrolled',window.pageYOffset>60));
 
   function handleVolSubmit(e) {
     e.preventDefault();

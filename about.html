@@ -83,6 +83,9 @@
     #scrollTopBtn.visible{opacity:1;pointer-events:auto}#scrollTopBtn:hover{background:#1e3b1c;transform:translateY(-2px)}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    /* ===== NAVBAR SCROLL TRANSITION ===== */
+    nav.fixed{transition:background .4s ease,box-shadow .4s ease}
+    nav.fixed.scrolled{background:rgba(216,205,189,0.96) !important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(45,84,40,.12) !important}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -116,7 +119,7 @@
 <section style="background-image:linear-gradient(rgba(10,40,25,.65),rgba(10,40,25,.65)),url('assets/bg photos/IMG-20250513-WA0096.jpg');background-size:cover;background-position:center;background-color:#2d5428;min-height:420px;padding-top:80px;display:flex;align-items:center;justify-content:center;text-align:center">
   <div class="px-4 sm:px-6 lg:px-8 text-white">
     <h1 class="text-4xl sm:text-6xl font-extrabold mb-4" style="color:#fff !important">About Us</h1>
-    <p class="text-base max-w-xl mx-auto" style="color:rgba(255,255,255,.85);font-weight:300">The story, mission, and people behind Green Generation Volunteers &mdash; founded by Uganda volunteers passionate about the environment.</p>
+    <p class="text-base max-w-xl mx-auto" style="color:rgba(255,255,255,.85);font-weight:300">The story, mission, and people behind Green Generation Volunteers &mdash; founded by Ugandan volunteers passionate about the environment.</p>
   </div>
 </section>
 
@@ -126,7 +129,7 @@
     <div class="grid lg:grid-cols-2 gap-16 items-start">
       <div>
         <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-6" style="color:#2d5428;font-style:italic" data-aos="fade-right">About Us.</h1>
-        <p class="text-sm leading-relaxed mb-8" style="color:#6b5347;font-weight:300">Green Generation Volunteers is a passionate youth-led environmental organization founded by dedicated Uganda volunteers based in UAE. Our aim is to promote environmental conservation, mitigate climate change, support small sustainable businesses, and boost local agriculture products in the Uganda and Africa. Through hands-on volunteer work, awareness campaigns, and partnerships, we aim to create lasting environmental and social impact while fostering global sustainability efforts.</p>
+        <p class="text-sm leading-relaxed mb-8" style="color:#6b5347;font-weight:300">Green Generation Volunteers is a passionate youth-led environmental organization founded by dedicated Ugandan volunteers based in UAE. Our aim is to promote environmental conservation, mitigate climate change, support small sustainable businesses, and boost local agriculture products in the Uganda and Africa. Through hands-on volunteer work, awareness campaigns, and partnerships, we aim to create lasting environmental and social impact while fostering global sustainability efforts.</p>
         <a href="#our-work" class="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border-2 transition-colors" style="color:#2d5428;border-color:#2d5428">
           <i class="fas fa-arrow-down text-xs"></i> Read About
         </a>
@@ -384,16 +387,13 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#3a6e34" data-aos="fade-up">Collaborated Partner</p>
     <h2 class="text-3xl font-extrabold text-center mb-10" style="color:#2d5428;font-style:italic" data-aos="fade-up">Our Partners</h2>
-    <div class="rounded-2xl px-8 py-10 shadow-sm flex flex-col sm:flex-row items-center gap-8" style="background:#fff" data-aos="fade-up">
+    <div class="inline-flex items-center gap-4 rounded-full px-6 py-3 shadow-sm" style="background:#fff" data-aos="fade-up">
+      <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eaf3e8">
+        <i class="fas fa-handshake text-xs" style="color:#2d5428"></i>
+      </div>
       <div class="text-left">
-        <h3 class="text-xl font-extrabold mb-1" style="color:#b85c38">Tauba Youth Foundation</h3>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Uganda</p>
-        <p class="text-xs italic mb-3" style="color:#9b8579">"Unpacking youth potential"</p>
-        <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Together we empower Uganda's youth through environmental conservation, community engagement, and sustainable action — building a greener future for generations to come.</p>
-        <div class="flex items-center gap-2 mt-4">
-          <i class="fas fa-handshake" style="color:#2d5428"></i>
-          <span class="text-xs font-semibold" style="color:#2d5428">Official Conservation Partner</span>
-        </div>
+        <p class="text-sm font-extrabold leading-tight" style="color:#b85c38">Tauba Youth Foundation</p>
+        <p class="text-xs" style="color:#3a6e34">Uganda &nbsp;·&nbsp; <span style="color:#9b8579;font-style:italic">Official Conservation Partner</span></p>
       </div>
     </div>
   </div>
@@ -448,7 +448,7 @@
       <!-- Col 1: Logo + description + social -->
       <div>
         <div class="mb-5">
-          <img src="assets/logo/Last black updated LOGO updated.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
+          <img src="assets/logo/Last white updated LOGO updated (1).png" alt="Green Generation Volunteers" class="w-52 sm:w-64 h-auto brightness-0 invert" />
         </div>
         <p class="text-sm leading-relaxed mb-6" style="color:#a89080;font-weight:300">A youth-led environmental organisation in Uganda dedicated to conservation, sustainable living, and a greener future in Africa.</p>
         <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Follow Us</p>
@@ -477,9 +477,9 @@
         <h4 class="text-white font-bold text-base mb-2">Our Campaigns</h4>
         <div class="w-8 h-0.5 mb-5" style="background:#3a6e34"></div>
         <ul class="space-y-2.5 text-sm" style="color:#a89080">
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Restoring Natural Habitats for Native Species</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Lake Shore Clean Ups</a></li>
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Protect Water Bodies</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Coastal Protection</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Youth Climate Action</a></li>
         </ul>
       </div>
@@ -513,6 +513,9 @@
   const s=document.getElementById('scrollTopBtn');
   window.addEventListener('scroll',()=>s.classList.toggle('visible',window.pageYOffset>400));
   s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  // Navbar scroll
+  const mainNav=document.querySelector('nav.fixed');
+  window.addEventListener('scroll',()=>mainNav.classList.toggle('scrolled',window.pageYOffset>60));
 </script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({duration:800,easing:'ease-out-cubic',once:true,offset:80});</script>

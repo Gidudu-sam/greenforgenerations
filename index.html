@@ -113,7 +113,7 @@
     @keyframes kenburns{0%{transform:scale(1.1)}100%{transform:scale(1)}}
 
     /* Cinematic gradient overlay */
-    .hero-slide::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,30,12,.97) 0%,rgba(20,50,20,.75) 40%,rgba(20,50,20,.35) 100%)}
+    .hero-slide::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(10,30,12,.92) 0%,rgba(20,50,20,.65) 55%,rgba(20,50,20,.15) 100%)}
 
     /* Content sits above everything */
     .hero-content{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;padding-bottom:0;padding-top:0}
@@ -123,14 +123,33 @@
     .slide-text{transform:translateY(40px);opacity:0;transition:all 0.8s cubic-bezier(0.22,1,0.36,1)}
     .hero-slide.active ~ .hero-content .slide-text{transform:translateY(0);opacity:1}
 
-    /* Dots */
-    .carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .3s,transform .3s;padding:0}
-    .carousel-dot.active{background:#fff;transform:scale(1.3)}
-    /* Pillar card hover effects */
-    .pillar-card:hover{transform:translateY(-6px) !important;box-shadow:0 16px 40px rgba(45,84,40,.18) !important}
-    .pillar-card:hover .pillar-icon{transform:scale(1.1) rotate(-5deg)}
-    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
-    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+    /* Progress bar dots */
+    .carousel-dot{height:3px;width:32px;border-radius:2px;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:background .3s,width .3s;padding:0;position:relative;overflow:hidden}
+    .carousel-dot.active{background:rgba(255,255,255,.25)}
+    .carousel-dot .dot-progress{position:absolute;left:0;top:0;height:100%;width:0%;background:#fff;border-radius:2px;transition:width linear}
+    .carousel-dot.active .dot-progress{width:100%}
+    /* ===== NAVBAR SCROLL TRANSITION ===== */
+    nav.fixed{transition:background .4s ease,box-shadow .4s ease,backdrop-filter .4s ease}
+    nav.fixed.scrolled{background:rgba(216,205,189,0.96) !important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(45,84,40,.12) !important}
+
+    /* ===== SPLIT BUTTON ===== */
+    .btn-split{display:inline-flex;align-items:center;border-radius:9999px;overflow:hidden;background:#fff;border:none;cursor:pointer;text-decoration:none;transition:box-shadow .3s}
+    .btn-split:hover{box-shadow:0 6px 24px rgba(255,255,255,.35)}
+    .btn-split-main{display:flex;align-items:center;gap:8px;padding:12px 20px;font-size:0.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2d5428;transition:background .3s}
+    .btn-split-main:hover{background:#f0f7ee}
+    .btn-split-divider{width:1px;height:20px;background:rgba(45,84,40,.2);flex-shrink:0}
+    .btn-split-arrow{display:flex;align-items:center;justify-content:center;width:44px;height:100%;padding:12px 14px;color:#2d5428;transition:background .3s,transform .3s}
+    .btn-split:hover .btn-split-arrow{background:#e8f3e6;transform:none}
+    .btn-split:hover .btn-split-arrow i{transform:translateX(3px)}
+    .btn-split-arrow i{transition:transform .3s ease}
+
+    /* ===== LEARN MORE ANIMATED LINK ===== */
+    .btn-learn{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.85);position:relative;padding-bottom:2px}
+    .btn-learn::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:rgba(255,255,255,.6);transition:width .3s ease}
+    .btn-learn:hover::after{width:100%}
+    .btn-learn:hover{color:#fff}
+    .btn-learn .arrow-icon{transition:transform .3s ease}
+    .btn-learn:hover .arrow-icon{transform:translateX(5px)}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -167,19 +186,24 @@
   <div class="hero-slide"><img src="assets/DSC08694.JPG" alt="Environmental action UAE" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top" /></div>
   <div class="hero-slide"><img src="assets/DSC08536.JPG" alt="Community volunteering" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" /></div>
   <div class="hero-content min-h-[65vh] sm:min-h-screen text-white px-6 sm:px-12 lg:px-24">
-    <div class="max-w-xl mx-auto text-center">
+    <div class="max-w-xl text-left">
       <!-- Pill badge -->
       <p class="slide-text inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full" style="background:rgba(255,255,255,.12);backdrop-filter:blur(6px);color:#e0f0dc;border:1px solid rgba(255,255,255,.18);font-size:0.65rem;white-space:nowrap">Youth-Led Environmental Action &middot; Uganda</p>
-      <h1 class="slide-text text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5" style="color:#fff">Protect first,<br />Restore Last.</h1>
-      <p class="slide-text text-sm sm:text-base mb-8 leading-relaxed mx-auto" style="color:rgba(255,255,255,.80);font-weight:300;transition-delay:0.3s;max-width:420px">Ugandan volunteers. Real action. Greener future.</p>
-      <div class="slide-text flex items-center justify-center gap-4" style="transition-delay:0.5s">
-        <a href="campaigns.html" class="inline-block px-6 py-3 rounded-full font-semibold text-white uppercase tracking-widest text-sm" style="background:#9b8579">Join Campaign</a>
-        <a href="about.html" class="text-sm font-semibold uppercase tracking-widest" style="color:rgba(255,255,255,.75)">Learn More <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+      <h1 class="slide-text text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-8" style="color:#fff">Protect first,<br />Restore Last.</h1>
+      <div class="slide-text flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5" style="transition-delay:0.5s">
+        <!-- Split button -->
+        <a href="campaigns.html" class="btn-split">
+          <span class="btn-split-main"><i class="fas fa-leaf text-xs"></i> Join Campaign</span>
+          <span class="btn-split-divider"></span>
+          <span class="btn-split-arrow"><i class="fas fa-arrow-right text-xs"></i></span>
+        </a>
+        <!-- Animated learn more -->
+        <a href="about.html" class="btn-learn">Learn More <i class="fas fa-arrow-right text-xs arrow-icon"></i></a>
       </div>
-      <div class="flex justify-center gap-3 mt-8">
-        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
-        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
-        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
+      <div class="flex gap-2 mt-8">
+        <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"><span class="dot-progress"></span></button>
+        <button class="carousel-dot" data-idx="1" aria-label="Slide 2"><span class="dot-progress"></span></button>
+        <button class="carousel-dot" data-idx="2" aria-label="Slide 3"><span class="dot-progress"></span></button>
       </div>
     </div>
   </div>
@@ -191,7 +215,7 @@
     <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34" data-aos="fade-up">Who We Are</p>
     <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color:#b85c38" data-aos="fade-up">Welcome to Green Generation Volunteers</h2>
     <p class="text-xs font-semibold mb-4" style="color:#9b8579" data-aos="fade-up">Founded by Uganda volunteers based in the UAE &mdash; driven by passion for the environment.</p>
-    <p class="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-4" style="color:#6b5347;font-weight:300" data-aos="fade-up" data-aos-delay="100">We are a youth-led environmental organisation dedicated to tree planting, lake shore clean ups, and climate action &mdash; empowering communities to build a greener future in Uganda and Africa.</p>
+    <p class="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-4" style="color:#6b5347;font-weight:300" data-aos="fade-up" data-aos-delay="100">We are a youth-led organization committed to environmental conservation, and sustainability &mdash; protecting shorelines from pollution, restoring ecosystems, and empowering communities across Uganda and Africa.</p>
     <p class="text-base sm:text-lg font-extrabold italic mb-10" style="color:#2d5428" data-aos="fade-up" data-aos-delay="150">"Creating eco-friendly solutions."</p>
     <div class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="rounded-2xl p-7 flex flex-col items-center text-center transition-all duration-300 pillar-card" style="background:#e0d8cc;box-shadow:0 4px 20px rgba(45,84,40,.08);border-top:3px solid #2d5428" data-aos="fade-up">
@@ -228,8 +252,11 @@
         <img src="assets/our story.jpg" alt="Our movement" style="width:100%;height:auto;display:block" />
       </div>
       <div class="flex flex-col justify-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color:#b85c38" data-aos="fade-left">The Story Behind Our Movement</h2>
-        <p class="text-sm leading-relaxed mb-6" style="color:#6b5347;font-weight:300">We are a passionate youth-led environmental organisation founded by dedicated Uganda volunteers with the aim of promoting environment conservation, mitigate climate change, support small sustainable businesses, boosting local agriculture products in Uganda and Africa. Through hands-on volunteer work, awareness campaigns, and partnerships, we aim to create lasting environmental and social impact while fostering global sustainability efforts.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3" style="color:#b85c38" data-aos="fade-left">The Story Behind Our Movement</h2>
+        <p class="text-sm font-semibold italic mb-5" style="color:#3a6e34" data-aos="fade-left">Get off-screen and give back some hours to nature</p>
+        <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">For many of us living abroad, life slowly becomes a cycle of work, sleep, and endless scrolling. Along the way, we begin to lose that sense of connection with people, community, and the world around us.</p>
+        <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">If you visit rural villages in Uganda, you'll notice something different. People are more present, more connected, and more engaged in everyday life — not because they lack phones or technology, but because community still matters deeply to them.</p>
+        <p class="text-sm leading-relaxed mb-6" style="color:#6b5347;font-weight:300">Being human is about more than simply getting through the day. We all need purpose, meaningful experiences, and moments that reconnect us to nature, people, and ourselves — not just endless hours on screens.</p>
         <div class="grid grid-cols-2 gap-3 mb-8">
           <div class="flex items-center gap-2 text-sm" style="color:#9b8579"><i class="fas fa-check-circle" style="color:#2d5428"></i> Climate &amp; Youth Action</div>
           <div class="flex items-center gap-2 text-sm" style="color:#9b8579"><i class="fas fa-check-circle" style="color:#2d5428"></i> Sustainability</div>
@@ -333,10 +360,10 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38" data-aos="fade-up">Our Campaigns</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="width:100%;height:auto;display:block" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/tree plantin 2.JPG" alt="Restoring Natural Habitats for Native Species" style="width:100%;height:auto;display:block" /></div>
         <div class="p-5">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
-          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Planting Trees</h3>
+          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Restoring Natural Habitats for Native Species</h3>
           <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Mangroves are the place where the land learns to breathe with the sea"</p>
           <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Wetlands and mangroves store carbon at rates significantly higher than many tropical forests, helping reduce CO₂ in the atmosphere.</p>
           <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-seedling mr-1" style="color:#2d5428"></i>50+ mangroves planted &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>20 volunteers</p>
@@ -357,10 +384,10 @@
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up" data-aos-delay="200"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/boat1.jpg" alt="Protect Lake Shore Clean Ups" style="width:100%;height:auto;display:block" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up" data-aos-delay="200"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/boat1.jpg" alt="Coastal Protection" style="width:100%;height:auto;display:block" /></div>
         <div class="p-5">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
-          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Protect Lake Shore Clean Ups</h3>
+          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Coastal Protection</h3>
           <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Where there are mangroves, there's life"</p>
           <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Mangroves act as natural coastal defenders — reducing waves, storms, and erosion while sheltering thousands of fish species and sustaining local fisheries.</p>
           <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-water mr-1" style="color:#2d5428"></i>8 / 15 rivers monitored &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>64 volunteers</p>
@@ -376,17 +403,13 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:#3a6e34" data-aos="fade-up">Collaborated Partner</p>
     <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38" data-aos="fade-up">Working Together for Change</h2>
-    <div class="rounded-2xl px-8 py-10 shadow-sm flex flex-col sm:flex-row items-center gap-8" style="background:#fff" data-aos="fade-up">
-      <!-- Info -->
-      <div class="text-center sm:text-left">
-        <h3 class="text-xl font-extrabold mb-1" style="color:#b85c38">Tauba Youth Foundation</h3>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Uganda</p>
-        <p class="text-xs italic mb-3" style="color:#9b8579">"Unpacking youth potential"</p>
-        <p class="text-sm leading-relaxed" style="color:#6b5347;font-weight:300">Together we empower Uganda's youth through environmental conservation, community engagement, and sustainable action — building a greener future for generations to come.</p>
-        <div class="flex items-center gap-2 mt-4">
-          <i class="fas fa-handshake" style="color:#2d5428"></i>
-          <span class="text-xs font-semibold" style="color:#2d5428">Official Conservation Partner</span>
-        </div>
+    <div class="inline-flex items-center gap-4 rounded-full px-6 py-3 shadow-sm" style="background:#fff" data-aos="fade-up">
+      <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:#eaf3e8">
+        <i class="fas fa-handshake text-xs" style="color:#2d5428"></i>
+      </div>
+      <div class="text-left">
+        <p class="text-sm font-extrabold leading-tight" style="color:#b85c38">Tauba Youth Foundation</p>
+        <p class="text-xs" style="color:#3a6e34">Uganda &nbsp;·&nbsp; <span style="color:#9b8579;font-style:italic">Official Conservation Partner</span></p>
       </div>
     </div>
   </div>
@@ -427,7 +450,7 @@
       <!-- Col 1: Logo + description + social -->
       <div>
         <div class="mb-5">
-          <img src="assets/logo/Last black updated LOGO updated.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
+          <img src="assets/logo/Last white updated LOGO updated (1).png" alt="Green Generation Volunteers" class="w-52 sm:w-64 h-auto brightness-0 invert" />
         </div>
         <p class="text-sm leading-relaxed mb-6" style="color:#a89080;font-weight:300">A youth-led environmental organisation in Uganda dedicated to conservation, sustainable living, and a greener future in Africa.</p>
         <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Follow Us</p>
@@ -456,9 +479,9 @@
         <h4 class="text-white font-bold text-base mb-2">Our Campaigns</h4>
         <div class="w-8 h-0.5 mb-5" style="background:#3a6e34"></div>
         <ul class="space-y-2.5 text-sm" style="color:#a89080">
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Planting Trees</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Restoring Natural Habitats for Native Species</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Lake Shore Clean Ups</a></li>
-          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Protect Water Bodies</a></li>
+          <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Coastal Protection</a></li>
           <li><a href="campaigns.html" class="hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-chevron-right text-xs" style="color:#3a6e34"></i>Youth Climate Action</a></li>
         </ul>
       </div>
@@ -497,26 +520,51 @@
   window.addEventListener('scroll',()=>scrollTopBtn.classList.toggle('visible',window.pageYOffset>400));
   scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
+  // ===== NAVBAR SCROLL TRANSITION =====
+  const mainNav = document.querySelector('nav.fixed');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', window.pageYOffset > 60);
+  });
+
   // ===== PREMIUM HERO CAROUSEL =====
   const slides = document.querySelectorAll('.hero-slide');
   const dots   = document.querySelectorAll('.carousel-dot');
+  const SLIDE_DURATION = 6000;
   let current  = 0, timer;
 
   function goTo(idx) {
-    slides[current].classList.remove('active');
+    // Reset previous
     dots[current].classList.remove('active');
+    const prevBar = dots[current].querySelector('.dot-progress');
+    if (prevBar) { prevBar.style.transition = 'none'; prevBar.style.width = '0%'; }
+    slides[current].classList.remove('active');
+
     current = (idx + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
+
+    // Animate progress bar
+    const bar = dots[current].querySelector('.dot-progress');
+    if (bar) {
+      bar.style.transition = 'none';
+      bar.style.width = '0%';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          bar.style.transition = `width ${SLIDE_DURATION}ms linear`;
+          bar.style.width = '100%';
+        });
+      });
+    }
   }
 
   function startTimer() {
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 10000);
+    timer = setInterval(() => goTo(current + 1), SLIDE_DURATION);
   }
 
   dots.forEach(dot => dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.idx)); startTimer(); }));
 
+  goTo(0);
   startTimer();
 </script>
 <script>
