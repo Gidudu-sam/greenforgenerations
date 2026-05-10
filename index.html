@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/logo/Last updated LOGO updated (1).png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Green Generation Volunteers - a youth-led environmental organisation in Uganda dedicated to tree planting, Lake Shore Clean Ups conservation, sustainability, and climate action." />
   <meta name="keywords" content="Green Generation Volunteers, Uganda volunteers, environmental conservation Uganda, tree planting Uganda, Lake Shore Clean Ups cleanup, climate action Uganda, youth volunteering Uganda, sustainability Uganda" />
@@ -33,7 +34,7 @@
     "@type": "NGO",
     "name": "Green Generation Volunteers",
     "url": "https://greengenvolunteers.org",
-    "logo": "https://greengenvolunteers.org/assets/logo/Original New LOGO updated (2)-1.png",
+    "logo": "https://greengenvolunteers.org/assets/logo/Last updated LOGO updated (1).png",
     "description": "A youth-led environmental volunteering organisation founded by Uganda volunteers, dedicated to conservation, sustainable living, and a greener future in Uganda and Africa.",
     "address": {
       "@type": "PostalAddress",
@@ -99,7 +100,8 @@
     .pillar-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(45,84,40,.18) !important}
 
     /* ===== PREMIUM HERO CAROUSEL ===== */
-    #heroCarousel{position:relative;min-height:100vh;overflow:hidden}
+    #heroCarousel{position:relative;min-height:75vh;overflow:hidden}
+    @media(min-width:640px){#heroCarousel{min-height:100vh}}
 
     /* Crossfade slides */
     .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease-in-out;z-index:0}
@@ -111,10 +113,11 @@
     @keyframes kenburns{0%{transform:scale(1.1)}100%{transform:scale(1)}}
 
     /* Cinematic gradient overlay */
-    .hero-slide::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,50,20,.85) 0%,rgba(30,59,28,.7) 50%,rgba(20,50,20,.55) 100%)}
+    .hero-slide::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,50,20,.92) 0%,rgba(30,59,28,.5) 50%,rgba(20,50,20,.25) 100%)}
 
     /* Content sits above everything */
-    .hero-content{position:relative;z-index:3}
+    .hero-content{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:3.5rem}
+    @media(min-width:640px){.hero-content{justify-content:center;padding-bottom:0}}
 
     /* Text slide-up animation */
     .slide-text{transform:translateY(40px);opacity:0;transition:all 0.8s cubic-bezier(0.22,1,0.36,1)}
@@ -128,8 +131,6 @@
     .pillar-card:hover .pillar-icon{transform:scale(1.1) rotate(-5deg)}
     .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
     .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
-    .rounded-2xl{transition:transform 0.3s ease,box-shadow 0.3s ease}
-    .rounded-2xl:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
   </style>
 </head>
 <body class="font-sans text-gray-800 antialiased">
@@ -139,7 +140,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between py-2 sm:py-3">
       <a href="index.html" class="flex items-center">
-        <img src="assets/logo/Original New LOGO updated (2)-1.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 md:w-52 h-auto" />
+        <img src="assets/logo/Last updated LOGO updated (1).png" alt="Green Generation Volunteers" class="w-32 sm:w-40 md:w-52 h-auto" />
       </a>
       <div class="hidden md:flex items-center gap-7">
         <a href="index.html" class="nav-link text-sm font-semibold" style="color:#2d5428">Home</a>
@@ -152,10 +153,10 @@
     </div>
   </div>
   <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2 space-y-1">
-    <a href="index.html" class="mobile-link block py-2 px-3 rounded-lg font-semibold" style="color:#2d5428">Home</a>
-    <a href="about.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">About</a>
-    <a href="campaigns.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Campaigns</a>
-    <a href="gallery.html" class="mobile-link block py-2 px-3 rounded-lg text-gray-700 hover:bg-green-50">Gallery</a>
+    <a href="index.html" class="mobile-link block py-3 px-3 rounded-lg font-semibold" style="color:#2d5428">Home</a>
+    <a href="about.html" class="mobile-link block py-3 px-3 rounded-lg text-gray-700 hover:bg-green-50">About</a>
+    <a href="campaigns.html" class="mobile-link block py-3 px-3 rounded-lg text-gray-700 hover:bg-green-50">Campaigns</a>
+    <a href="gallery.html" class="mobile-link block py-3 px-3 rounded-lg text-gray-700 hover:bg-green-50">Gallery</a>
     <a href="contact us.html" class="mobile-link block mt-2 py-2 px-3 rounded-lg text-white text-center font-semibold" style="background:#2d5428">Contact Us</a>
   </div>
 </nav>
@@ -165,15 +166,17 @@
   <div class="hero-slide active"><img src="assets/DSC08233.jpg" alt="Volunteers planting trees" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" /></div>
   <div class="hero-slide"><img src="assets/DSC08694.JPG" alt="Environmental action UAE" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top" /></div>
   <div class="hero-slide"><img src="assets/DSC08536.JPG" alt="Community volunteering" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" /></div>
-  <div class="hero-content min-h-[85vh] sm:min-h-screen flex items-center justify-center text-white text-center px-6 sm:px-4">
-    <div class="max-w-2xl mx-auto">
-      <p class="slide-text text-xs font-semibold uppercase tracking-widest mb-4" style="color:#b8d4b0">Youth-Led Environmental Action &middot; Uganda</p>
-      <h1 class="slide-text text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4" style="color:#fff">Save The Planet.</h1>
-      <p class="slide-text text-sm sm:text-base mb-8 max-w-sm sm:max-w-xl mx-auto leading-relaxed" style="color:rgba(255,255,255,.85);font-weight:300;transition-delay:0.3s">A youth-led environmental organisation founded by dedicated Ugandan Volunteers based in UAE with the aim of promoting environmental conservation, climate action, and sustainable living.</p>
-      <div class="slide-text" style="transition-delay:0.45s">
+  <div class="hero-content min-h-[75vh] sm:min-h-screen text-white px-6 sm:px-12 lg:px-24">
+    <div class="max-w-xl mx-auto text-center">
+      <!-- Pill badge -->
+      <p class="slide-text inline-block text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full" style="background:rgba(255,255,255,.12);backdrop-filter:blur(6px);color:#e0f0dc;border:1px solid rgba(255,255,255,.18);font-size:0.65rem;white-space:nowrap">Youth-Led Environmental Action &middot; Uganda</p>
+      <h1 class="slide-text text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5" style="color:#fff">Protect first,<br />Restore Last.</h1>
+      <p class="slide-text text-sm sm:text-base mb-8 leading-relaxed mx-auto" style="color:rgba(255,255,255,.80);font-weight:300;transition-delay:0.3s;max-width:420px">Ugandan volunteers. Real action. Greener future.</p>
+      <div class="slide-text flex items-center justify-center gap-4" style="transition-delay:0.5s">
         <a href="campaigns.html" class="inline-block px-6 py-3 rounded-full font-semibold text-white uppercase tracking-widest text-sm" style="background:#9b8579">Join Campaign</a>
+        <a href="about.html" class="text-sm font-semibold uppercase tracking-widest" style="color:rgba(255,255,255,.75)">Learn More <i class="fas fa-arrow-right text-xs ml-1"></i></a>
       </div>
-      <div class="flex justify-center gap-3 mt-10">
+      <div class="flex justify-center gap-3 mt-8">
         <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
         <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
         <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
@@ -189,7 +192,7 @@
     <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color:#b85c38" data-aos="fade-up">Welcome to Green Generation Volunteers</h2>
     <p class="text-xs font-semibold mb-4" style="color:#9b8579" data-aos="fade-up">Founded by Uganda volunteers based in the UAE &mdash; driven by passion for the environment.</p>
     <p class="text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-4" style="color:#6b5347;font-weight:300" data-aos="fade-up" data-aos-delay="100">We are a youth-led environmental organisation dedicated to tree planting, lake shore clean ups, and climate action &mdash; empowering communities to build a greener future in Uganda and Africa.</p>
-    <p class="text-base sm:text-lg font-extrabold italic mb-10" style="color:#2d5428" data-aos="fade-up" data-aos-delay="150">"Protect Uganda's ecosystems, one volunteer at a time."</p>
+    <p class="text-base sm:text-lg font-extrabold italic mb-10" style="color:#2d5428" data-aos="fade-up" data-aos-delay="150">"Creating eco-friendly solutions."</p>
     <div class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="rounded-2xl p-7 flex flex-col items-center text-center transition-all duration-300 pillar-card" style="background:#e0d8cc;box-shadow:0 4px 20px rgba(45,84,40,.08);border-top:3px solid #2d5428" data-aos="fade-up">
         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300" style="background:#2d5428;box-shadow:0 6px 20px rgba(45,84,40,.3)"><i class="fas fa-tree text-2xl text-white"></i></div>
@@ -330,38 +333,37 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl sm:text-3xl font-extrabold mb-10" style="color:#b85c38" data-aos="fade-up">Our Campaigns</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/treeplanting.jpeg" alt="Planting Trees" style="width:100%;height:auto;display:block" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/tree plantin 2.JPG" alt="Planting Trees" style="width:100%;height:auto;display:block" /></div>
         <div class="p-5">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
           <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Planting Trees</h3>
-          <p class="text-xs leading-relaxed mb-1" style="color:#6b5347;font-weight:300">"Rooting Hope, Growing the Future"</p>
-          <ul class="text-xs space-y-0.5 mb-4" style="color:#6b5347;font-weight:300">
-            <li>Reforesting degraded areas</li><li>Fighting climate change through trees</li>
-            <li>Greening urban spaces</li><li>Community-led tree planting drives</li>
-          </ul>
+          <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Mangroves are the place where the land learns to breathe with the sea"</p>
+          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Wetlands and mangroves store carbon at rates significantly higher than many tropical forests, helping reduce CO₂ in the atmosphere.</p>
+          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-seedling mr-1" style="color:#2d5428"></i>50+ mangroves planted &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>20 volunteers</p>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up" data-aos-delay="100"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/beach_cleaning.jpg" alt="Taasa Enyanja Campaign" style="width:100%;height:auto;display:block" /></div>
         <div class="p-5">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#9b8579">Lake Shore Clean Ups</span>
           <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Taasa Enyanja Campaign</h3>
-          <p class="text-xs leading-relaxed mb-1" style="color:#6b5347;font-weight:300">"This was more than a cleanup &mdash; it's a movement."</p>
-          <ul class="text-xs space-y-0.5 mb-4" style="color:#6b5347;font-weight:300">
-            <li><i class="fas fa-location-dot mr-1" style="color:#2d5428"></i>Ssenyondo Landing Site, Bunjako, Mpigi District</li>
+          <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"This was more than a cleanup — it's a movement."</p>
+          <ul class="text-xs space-y-0.5 mb-3" style="color:#6b5347;font-weight:300">
+            <li><i class="fas fa-location-dot mr-1" style="color:#2d5428"></i>Ssenyondo Landing Site, Bunjako, Mpigi</li>
             <li><i class="fas fa-calendar mr-1" style="color:#2d5428"></i>10th January 2026</li>
-            <li><i class="fas fa-users mr-1" style="color:#2d5428"></i>16 Volunteers + 8 community members</li>
-            <li><i class="fas fa-trash mr-1" style="color:#2d5428"></i>18 bags &mdash; 161.85 kg collected</li>
+            <li><i class="fas fa-trash mr-1" style="color:#2d5428"></i>18 bags — 161.85 kg collected</li>
+            <li><i class="fas fa-users mr-1" style="color:#2d5428"></i>24 volunteers</li>
           </ul>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up" data-aos-delay="200"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/cleanwaterbodies.JPG" alt="Protect Lake Shore Clean Ups" style="width:100%;height:auto;display:block" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="background:#d8cdbd" data-aos="fade-up" data-aos-delay="200"><div style="height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="assets/boat1.jpg" alt="Protect Lake Shore Clean Ups" style="width:100%;height:auto;display:block" /></div>
         <div class="p-5">
-          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Protect Water Bodies</h3>
-          <p class="text-xs leading-relaxed mb-1" style="color:#6b5347;font-weight:300">"Guardians of Our Rivers, Lakes, and Wetlands"</p>
-          <ul class="text-xs space-y-0.5 mb-4" style="color:#6b5347;font-weight:300">
-            <li>Safeguarding freshwater ecosystems</li><li>Combating pollution</li>
-            <li>Preserving clean accessible water</li><li>Educating communities on conservation</li>
-          </ul>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
+          <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Protect Lake Shore Clean Ups</h3>
+          <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Where there are mangroves, there's life"</p>
+          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Mangroves act as natural coastal defenders — reducing waves, storms, and erosion while sheltering thousands of fish species and sustaining local fisheries.</p>
+          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-water mr-1" style="color:#2d5428"></i>8 / 15 rivers monitored &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>64 volunteers</p>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
@@ -425,7 +427,7 @@
       <!-- Col 1: Logo + description + social -->
       <div>
         <div class="mb-5">
-          <img src="assets/logo/Original New LOGO updated (2)-2.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
+          <img src="assets/logo/Last black updated LOGO updated.png" alt="Green Generation Volunteers" class="w-32 sm:w-40 h-auto" />
         </div>
         <p class="text-sm leading-relaxed mb-6" style="color:#a89080;font-weight:300">A youth-led environmental organisation in Uganda dedicated to conservation, sustainable living, and a greener future in Africa.</p>
         <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:#3a6e34">Follow Us</p>
