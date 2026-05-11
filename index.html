@@ -2,54 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="assets/logo/Last updated LOGO updated (1).png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Green Generation Volunteers - a youth-led environmental organisation in Uganda dedicated to tree planting, Lake Shore Clean Ups conservation, sustainability, and climate action." />
-  <meta name="keywords" content="Green Generation Volunteers, Uganda volunteers, environmental conservation Uganda, tree planting Uganda, Lake Shore Clean Ups cleanup, climate action Uganda, youth volunteering Uganda, sustainability Uganda" />
+  <meta name="theme-color" content="#2d5428" />
+
+  <!-- Primary SEO -->
+  <title>Green Generation Volunteers | Environmental Conservation Uganda</title>
+  <meta name="description" content="Green Generation Volunteers is a youth-led environmental organisation in Uganda dedicated to restoring natural habitats, lake shore clean-ups, coastal protection, and climate action." />
+  <meta name="keywords" content="Green Generation Volunteers, environmental conservation Uganda, youth volunteers Uganda, lake shore clean-ups Uganda, tree planting Uganda, climate action Uganda, sustainability Uganda, Kampala environmental NGO" />
   <meta name="author" content="Green Generation Volunteers" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://greengenvolunteers.org/index.html" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://greengenerationvolunteers.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/Last updated LOGO updated (1).png" />
+  <link rel="apple-touch-icon" href="assets/logo/Last updated LOGO updated (1).png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Green Generation Volunteers | Home" />
-  <meta property="og:description" content="A youth-led environmental organisation in Uganda dedicated to tree planting, Lake Shore Clean Ups conservation, and climate action." />
-  <meta property="og:image" content="https://greengenvolunteers.org/assets/DSC08233.jpg" />
-  <meta property="og:url" content="https://greengenvolunteers.org/index.html" />
   <meta property="og:site_name" content="Green Generation Volunteers" />
   <meta property="og:locale" content="en_UG" />
+  <meta property="og:title" content="Green Generation Volunteers | Environmental Conservation Uganda" />
+  <meta property="og:description" content="A youth-led environmental organisation in Uganda dedicated to restoring natural habitats, lake shore clean-ups, coastal protection, and climate action." />
+  <meta property="og:url" content="https://greengenerationvolunteers.com/" />
+  <meta property="og:image" content="https://greengenerationvolunteers.com/assets/DSC08233.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Green Generation Volunteers in action - environmental conservation Uganda" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Green Generation Volunteers | Home" />
-  <meta name="twitter:description" content="A youth-led environmental organisation in Uganda dedicated to tree planting, Lake Shore Clean Ups conservation, and climate action." />
-  <meta name="twitter:image" content="https://greengenvolunteers.org/assets/DSC08233.jpg" />
-
-  <title>Green Generation Volunteers | Home</title>
+  <meta name="twitter:title" content="Green Generation Volunteers | Environmental Conservation Uganda" />
+  <meta name="twitter:description" content="A youth-led environmental organisation in Uganda dedicated to restoring natural habitats, lake shore clean-ups, and climate action." />
+  <meta name="twitter:image" content="https://greengenerationvolunteers.com/assets/DSC08233.jpg" />
+  <meta name="twitter:image:alt" content="Green Generation Volunteers - environmental conservation Uganda" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "Green Generation Volunteers",
-    "url": "https://greengenvolunteers.org",
-    "logo": "https://greengenvolunteers.org/assets/logo/Last updated LOGO updated (1).png",
-    "description": "A youth-led environmental volunteering organisation founded by Uganda volunteers, dedicated to conservation, sustainable living, and a greener future in Uganda and Africa.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kawempe",
-      "addressLocality": "Kampala",
-      "addressCountry": "UG",
-      "postalCode": "PO BOX 208337"
-    },
-    "telephone": "+256789953230",
-    "email": "hello@greenforgen.org",
-    "sameAs": [],
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Kampala, Uganda"
-    }
+    "@graph": [
+      {
+        "@type": "NGO",
+        "@id": "https://greengenerationvolunteers.com/#organization",
+        "name": "Green Generation Volunteers",
+        "url": "https://greengenerationvolunteers.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://greengenerationvolunteers.com/assets/logo/Last updated LOGO updated (1).png",
+          "width": 300,
+          "height": 100
+        },
+        "description": "A youth-led environmental volunteering organisation founded by Ugandan volunteers, dedicated to conservation, sustainable living, and a greener future in Uganda and Africa.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kawempe",
+          "addressLocality": "Kampala",
+          "addressCountry": "UG",
+          "postalCode": "PO BOX 208337"
+        },
+        "telephone": "+256789953230",
+        "email": "info@greengenerationvolunteers.com",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Kampala, Uganda"
+        },
+        "sameAs": [
+          "https://www.instagram.com/green_for_generations"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://greengenerationvolunteers.com/#website",
+        "url": "https://greengenerationvolunteers.com",
+        "name": "Green Generation Volunteers",
+        "publisher": {"@id": "https://greengenerationvolunteers.com/#organization"},
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://greengenerationvolunteers.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://greengenerationvolunteers.com/#webpage",
+        "url": "https://greengenerationvolunteers.com/",
+        "name": "Green Generation Volunteers | Environmental Conservation Uganda",
+        "isPartOf": {"@id": "https://greengenerationvolunteers.com/#website"},
+        "about": {"@id": "https://greengenerationvolunteers.com/#organization"},
+        "description": "Green Generation Volunteers is a youth-led environmental organisation in Uganda dedicated to restoring natural habitats, lake shore clean-ups, and climate action."
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -260,8 +302,8 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-3" style="color:#b85c38" data-aos="fade-left">The Story Behind Our Movement</h2>
         <p class="text-sm font-semibold italic mb-5" style="color:#3a6e34" data-aos="fade-left">Get off-screen and give back some hours to nature</p>
         <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">For many of us living abroad, life slowly becomes a cycle of work, sleep, and endless scrolling. Along the way, we begin to lose that sense of connection with people, community, and the world around us.</p>
-        <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">If you visit rural villages in Uganda, you'll notice something different. People are more present, more connected, and more engaged in everyday life — not because they lack phones or technology, but because community still matters deeply to them.</p>
-        <p class="text-sm leading-relaxed mb-6" style="color:#6b5347;font-weight:300">Being human is about more than simply getting through the day. We all need purpose, meaningful experiences, and moments that reconnect us to nature, people, and ourselves — not just endless hours on screens.</p>
+        <p class="text-sm leading-relaxed mb-4" style="color:#6b5347;font-weight:300">If you visit rural villages in Uganda, you'll notice something different. People are more present, more connected, and more engaged in everyday life &mdash; not because they lack phones or technology, but because community still matters deeply to them.</p>
+        <p class="text-sm leading-relaxed mb-6" style="color:#6b5347;font-weight:300">Being human is about more than simply getting through the day. We all need purpose, meaningful experiences, and moments that reconnect us to nature, people, and ourselves &mdash; not just endless hours on screens.</p>
         <div class="grid grid-cols-2 gap-3 mb-8">
           <div class="flex items-center gap-2 text-sm" style="color:#9b8579"><i class="fas fa-check-circle" style="color:#2d5428"></i> Climate &amp; Youth Action</div>
           <div class="flex items-center gap-2 text-sm" style="color:#9b8579"><i class="fas fa-check-circle" style="color:#2d5428"></i> Sustainability</div>
@@ -370,8 +412,8 @@
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#2d5428">Climate Action</span>
           <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Restoring Natural Habitats for Native Species</h3>
           <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Mangroves are the place where the land learns to breathe with the sea"</p>
-          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Wetlands and mangroves store carbon at rates significantly higher than many tropical forests, helping reduce CO₂ in the atmosphere.</p>
-          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-seedling mr-1" style="color:#2d5428"></i>50+ mangroves planted &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>20 volunteers</p>
+          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Wetlands and mangroves store carbon at rates significantly higher than many tropical forests, helping reduce CO2 in the atmosphere.</p>
+          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-seedling mr-1" style="color:#2d5428"></i>50+ mangroves planted &nbsp;&mdash;&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>20 volunteers</p>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
@@ -379,11 +421,11 @@
         <div class="p-5">
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#9b8579">Lake Shore Clean Ups</span>
           <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Taasa Enyanja Campaign</h3>
-          <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"This was more than a cleanup — it's a movement."</p>
+          <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"This was more than a cleanup &mdash; it's a movement."</p>
           <ul class="text-xs space-y-0.5 mb-3" style="color:#6b5347;font-weight:300">
             <li><i class="fas fa-location-dot mr-1" style="color:#2d5428"></i>Ssenyondo Landing Site, Bunjako, Mpigi</li>
             <li><i class="fas fa-calendar mr-1" style="color:#2d5428"></i>10th January 2026</li>
-            <li><i class="fas fa-trash mr-1" style="color:#2d5428"></i>18 bags — 161.85 kg collected</li>
+            <li><i class="fas fa-trash mr-1" style="color:#2d5428"></i>18 bags &mdash; 161.85 kg collected</li>
             <li><i class="fas fa-users mr-1" style="color:#2d5428"></i>24 volunteers</li>
           </ul>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
@@ -394,8 +436,8 @@
           <span class="text-xs font-semibold px-3 py-1 rounded-full text-white mb-3 inline-block" style="background:#3a6e34">Freshwater Action</span>
           <h3 class="font-extrabold text-base mb-2" style="color:#b85c38">Coastal Protection</h3>
           <p class="text-xs italic leading-relaxed mb-2" style="color:#6b5347;font-weight:300">"Where there are mangroves, there's life"</p>
-          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Mangroves act as natural coastal defenders — reducing waves, storms, and erosion while sheltering thousands of fish species and sustaining local fisheries.</p>
-          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-water mr-1" style="color:#2d5428"></i>8 / 15 rivers monitored &nbsp;·&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>64 volunteers</p>
+          <p class="text-xs leading-relaxed mb-3" style="color:#6b5347;font-weight:300">Mangroves act as natural coastal defenders &mdash; reducing waves, storms, and erosion while sheltering thousands of fish species and sustaining local fisheries.</p>
+          <p class="text-xs mb-3" style="color:#9b8579"><i class="fas fa-water mr-1" style="color:#2d5428"></i>8 / 15 rivers monitored &nbsp;&mdash;&nbsp; <i class="fas fa-users mr-1" style="color:#2d5428"></i>64 volunteers</p>
           <a href="campaigns.html" class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest" style="color:#2d5428">Take Action <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
       </div>
@@ -414,7 +456,7 @@
       </div>
       <div class="text-left">
         <p class="text-sm font-extrabold leading-tight" style="color:#b85c38">Tauba Youth Foundation</p>
-        <p class="text-xs" style="color:#3a6e34">Uganda &nbsp;·&nbsp; <span style="color:#9b8579;font-style:italic">Official Conservation Partner</span></p>
+        <p class="text-xs" style="color:#3a6e34">Uganda &nbsp;&mdash;&nbsp; <span style="color:#9b8579;font-style:italic">Official Conservation Partner</span></p>
       </div>
     </div>
   </div>
@@ -500,7 +542,7 @@
           <li class="flex items-start gap-3"><i class="fas fa-map-pin mt-0.5" style="color:#3a6e34"></i><span>PO BOX 208337, Kampala</span></li>
           <li class="flex items-center gap-3"><i class="fas fa-phone" style="color:#3a6e34"></i><a href="tel:+256789953230" class="hover:text-white">+256 789 953 230</a></li>
           <li class="flex items-center gap-3"><i class="fab fa-whatsapp" style="color:#3a6e34"></i><a href="https://wa.me/256789953230" class="hover:text-white">+256 789 953 230</a></li>
-          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
+          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:info@greengenerationvolunteers.com" class="hover:text-white">info@greengenerationvolunteers.com</a></li>
           <li class="flex items-start gap-3"><i class="fas fa-clock mt-0.5" style="color:#3a6e34"></i><span>Mon &ndash; Fri: 9:00 AM - 5:00 PM</span></li>
         </ul>
       </div>
@@ -631,8 +673,23 @@
     e.preventDefault();
     const email = document.getElementById('newsletterEmail').value;
     if (!email) return;
-    document.getElementById('newsletterForm').classList.add('hidden');
-    document.getElementById('newsletterSuccess').classList.remove('hidden');
+
+    // Silent submit to Google Forms (no redirect)
+    const FORM_ID    = '1FAIpQLSdgsHr12t6Ehf-KoMgoi64eDMsaRBKn4Ku8F4Cg8pZgD-UZmQ';
+    const ENTRY_ID   = 'entry.339580455';
+    const formUrl    = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
+    const formData   = new FormData();
+    formData.append(ENTRY_ID, email);
+
+    fetch(formUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    }).finally(() => {
+      // Always show success — no-cors means we can't read the response
+      document.getElementById('newsletterForm').classList.add('hidden');
+      document.getElementById('newsletterSuccess').classList.remove('hidden');
+    });
   }
 </script>
 <script>

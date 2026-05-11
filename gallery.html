@@ -2,44 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="assets/logo/Last updated LOGO updated (1).png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Green Generation Volunteers photo gallery - real moments from tree planting, Lake Shore Clean Ups conservation, and community events in Uganda." />
-  <meta name="keywords" content="Green Generation Volunteers gallery, Uganda environmental photos, tree planting photos Uganda, Lake Shore Clean Ups cleanup photos, volunteer photos Uganda" />
+  <meta name="theme-color" content="#2d5428" />
+
+  <!-- Primary SEO -->
+  <title>Photo Gallery | Green Generation Volunteers Uganda</title>
+  <meta name="description" content="Browse the Green Generation Volunteers photo gallery - real moments from lake shore clean-ups, habitat restoration, and community environmental action in Uganda." />
+  <meta name="keywords" content="Green Generation Volunteers gallery, Uganda environmental photos, lake shore clean-up photos Uganda, volunteer photos Uganda, conservation photos Uganda" />
   <meta name="author" content="Green Generation Volunteers" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://greengenvolunteers.org/gallery.html" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://greengenerationvolunteers.com/gallery.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/Last updated LOGO updated (1).png" />
+  <link rel="apple-touch-icon" href="assets/logo/Last updated LOGO updated (1).png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Green Generation Volunteers | Gallery" />
-  <meta property="og:description" content="A glimpse into the work, people, and moments that make our mission real "” photos from Uganda environmental campaigns." />
-  <meta property="og:image" content="https://greengenvolunteers.org/assets/DSC08694.JPG" />
-  <meta property="og:url" content="https://greengenvolunteers.org/gallery.html" />
   <meta property="og:site_name" content="Green Generation Volunteers" />
   <meta property="og:locale" content="en_UG" />
+  <meta property="og:title" content="Photo Gallery | Green Generation Volunteers Uganda" />
+  <meta property="og:description" content="Real moments from lake shore clean-ups, habitat restoration, and community environmental action in Uganda by Green Generation Volunteers." />
+  <meta property="og:url" content="https://greengenerationvolunteers.com/gallery.html" />
+  <meta property="og:image" content="https://greengenerationvolunteers.com/assets/DSC08694.JPG" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Green Generation Volunteers environmental action Uganda" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Green Generation Volunteers | Gallery" />
-  <meta name="twitter:description" content="A glimpse into the work, people, and moments that make our mission real." />
-  <meta name="twitter:image" content="https://greengenvolunteers.org/assets/DSC08694.JPG" />
-
-  <title>Green Generation Volunteers | Gallery</title>
+  <meta name="twitter:title" content="Photo Gallery | Green Generation Volunteers Uganda" />
+  <meta name="twitter:description" content="Real moments from lake shore clean-ups, habitat restoration, and community environmental action in Uganda." />
+  <meta name="twitter:image" content="https://greengenerationvolunteers.com/assets/DSC08694.JPG" />
+  <meta name="twitter:image:alt" content="Green Generation Volunteers Uganda gallery" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Green Generation Volunteers Photo Gallery",
-    "url": "https://greengenvolunteers.org/gallery.html",
-    "description": "Photos from tree planting, Lake Shore Clean Ups conservation, and community events by Green Generation Volunteers in Uganda.",
-    "publisher": {
-      "@type": "NGO",
-      "name": "Green Generation Volunteers",
-      "url": "https://greengenvolunteers.org"
-    }
+    "@graph": [
+      {
+        "@type": "ImageGallery",
+        "url": "https://greengenerationvolunteers.com/gallery.html",
+        "name": "Green Generation Volunteers Photo Gallery",
+        "description": "Photos from lake shore clean-ups, habitat restoration, and community events by Green Generation Volunteers in Uganda.",
+        "publisher": {"@type": "NGO", "name": "Green Generation Volunteers", "url": "https://greengenerationvolunteers.com"},
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://greengenerationvolunteers.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://greengenerationvolunteers.com/gallery.html"}
+          ]
+        }
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -164,11 +180,11 @@
     <div id="galleryGrid">
 
       <!-- Lake Shore Clean Ups -->
-      <div class="gallery-item" data-category="beach" data-caption="Taasa Enyanja "“ Lake Shore Clean Ups Cleanup, Ssenyondo Landing Site">
+      <div class="gallery-item" data-category="beach" data-caption="Taasa Enyanja "&mdash; Lake Shore Clean Ups Cleanup, Ssenyondo Landing Site">
         <img src="assets/updates.jpg" alt="Taasa Enyanja Campaign" />
       </div>
 
-      <div class="gallery-item" data-category="beach" data-caption="Volunteers collecting waste "“ 161.85 kg collected">
+      <div class="gallery-item" data-category="beach" data-caption="Volunteers collecting waste "&mdash; 161.85 kg collected">
         <img src="assets/community clean up.jpg" alt="Beach cleanup volunteers" />
       </div>
 
@@ -176,7 +192,7 @@
         <img src="assets/DSC08298.JPG" alt="Planting in wetlands" />
       </div>
 
-      <div class="gallery-item" data-category="beach" data-caption="Boat patrol "“ Lake Shore Clean Ups conservation">
+      <div class="gallery-item" data-category="beach" data-caption="Boat patrol "&mdash; Lake Shore Clean Ups conservation">
         <img src="assets/boat1.jpg" alt="Boat patrol Lake Shore Clean Ups" />
       </div>
 
@@ -223,7 +239,7 @@
         <img src="assets/1000643493.jpg" alt="Volunteers at work" />
       </div>
 
-      <div class="gallery-item" data-category="beach" data-caption="Team effort "“ collecting waste at the shoreline">
+      <div class="gallery-item" data-category="beach" data-caption="Team effort "&mdash; collecting waste at the shoreline">
         <img src="assets/1000644285.jpg" alt="Team effort water cleanup" />
       </div>
 
@@ -231,7 +247,7 @@
         <img src="assets/image00008 (4).jpeg" alt="Green Generation Volunteers team" />
       </div>
 
-      <div class="gallery-item" data-category="events" data-caption="Volunteer with megaphone "“ community awareness">
+      <div class="gallery-item" data-category="events" data-caption="Volunteer with megaphone "&mdash; community awareness">
         <img src="assets/DSC08536.JPG" alt="Community awareness" />
       </div>
 
@@ -275,7 +291,7 @@
   <div style="position:absolute;inset:0;background:rgba(20,50,20,.78)"></div>
   <div class="max-w-2xl mx-auto px-4" style="position:relative;z-index:1">
     <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Be Part of the Story</h2>
-    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">What inspired us to volunteer was the desire to give back some of our time to nature, to do something meaningful and help build a better future for generations to come. Each photo here captures real volunteers making a real difference. Your moment could be next — join us.</p>
+    <p class="text-green-100 mb-8 leading-relaxed" style="font-weight:300">What inspired us to volunteer was the desire to give back some of our time to nature, to do something meaningful and help build a better future for generations to come. Each photo here captures real volunteers making a real difference. Your moment could be next &mdash; join us.</p>
     <a href="campaigns.html#volunteer-signup" class="inline-block px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white hover:bg-white hover:text-green-800 transition-colors">Become a Volunteer</a>
   </div>
 </section>
@@ -333,7 +349,7 @@
           <li class="flex items-start gap-3"><i class="fas fa-map-pin mt-0.5" style="color:#3a6e34"></i><span>PO BOX 208337, Kampala</span></li>
           <li class="flex items-center gap-3"><i class="fas fa-phone" style="color:#3a6e34"></i><a href="tel:+256789953230" class="hover:text-white">+256 789 953 230</a></li>
           <li class="flex items-center gap-3"><i class="fab fa-whatsapp" style="color:#3a6e34"></i><a href="https://wa.me/256789953230" class="hover:text-white">+256 789 953 230</a></li>
-          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:hello@greenforgen.org" class="hover:text-white">hello@greenforgen.org</a></li>
+          <li class="flex items-center gap-3"><i class="fas fa-envelope" style="color:#3a6e34"></i><a href="mailto:info@greengenerationvolunteers.com" class="hover:text-white">info@greengenerationvolunteers.com</a></li>
           <li class="flex items-start gap-3"><i class="fas fa-clock mt-0.5" style="color:#3a6e34"></i><span>Mon &ndash; Fri: 9:00 AM - 5:00 PM</span></li>
         </ul>
       </div>
